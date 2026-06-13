@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>借助AI，实现了理想中的blog系统 | Bob的小角落</title>
+    <link rel="stylesheet" href="/assets/scheme-green.css">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">跳转到内容</a>
+
+    <div class="layout-container">
+
+        <header class="site-header">
+            <div class="header-inner">
+                <a href="/" class="site-logo">Bob的小角落</a>
+
+                <nav class="header-nav" aria-label="Main Navigation">
+                    <ul class="nav-list">
+                        <li><a href="/" class="nav-link">首页</a></li>
+                        <li><a href="/pages/1.html" class="nav-link">文章</a></li>
+                        <li><a href="/tags/" class="nav-link">标签</a></li>
+                        <li><a href="/archive/" class="nav-link">归档</a></li>
+                        
+                        <li><a href="/about/" class="nav-link">关于我</a></li>
+                        
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="scheme-btn-wrapper">
+                        <button id="scheme-toggle" class="scheme-btn desktop-scheme-btn" aria-label="Toggle color scheme">
+                            <svg class="scheme-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                        </button>
+                        <div id="scheme-popup" class="scheme-popup">
+                            <div class="scheme-popup-title">配色方案</div>
+                            <div class="scheme-popup-grid" id="scheme-popup-grid"></div>
+                        </div>
+                    </div>
+
+                    <button id="theme-toggle" class="theme-btn desktop-theme-btn" aria-label="切换暗色模式">
+                        <svg class="icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.364l-.707-.707M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+                    </button>
+
+                    <button id="menu-toggle" class="menu-btn" aria-label="Menu">☰</button>
+                </div>
+            </div>
+        </header>
+
+        <main id="main-content" class="main-content">
+            
+
+<div class="post-with-toc" id="post-with-toc">
+  <article class="post-full">
+      <header class="post-full-header">
+          <h1 class="post-full-title">借助AI，实现了理想中的blog系统</h1>
+          <div class="post-meta">
+              <time datetime="Wed Jun 10 2026 20:44:00 GMT+0800 (China Standard Time)">June 10, 2026</time>
+              
+              <span class="meta-sep">•</span>
+              <span>6 分钟阅读</span>
+              <span class="meta-sep">•</span>
+              <a href="/category/%E5%B0%8F%E7%8E%A9%E6%84%8F.html" class="post-cat">小玩意</a>
+          </div>
+          
+          <div class="post-tags">
+              
+              <a href="/tags/#%E4%B8%BB%E9%A1%B5" class="tag-link">#主页</a>
+              
+              <a href="/tags/#Hokshi" class="tag-link">#Hokshi</a>
+              
+              <a href="/tags/#%E5%BC%80%E5%8F%91" class="tag-link">#开发</a>
+              
+          </div>
+      </header>
+
+      <div id="post-content" class="post-content">
+          <h2 id="前因">前因</h2>
+<p>2020年的时候，作为一名忠实的 PHP 爱好者，抱着试验的心态开始尝试 JavaScript，于是借助新鲜出炉的 Deno，搭配临时学的 TypeScript，做了一个没什么技术含量的 blog 系统。虽然代码很潦草，但静态 HTML 生成、多主题支持和 Github 自动部署等功能齐全，这么多年使用起来也还算顺手。彼时给这个粗糙的 SSG 项目取名为“Hokshi”，模仿的是上海话里“闪电”的发音。<br><img src="/upload/hokshi-intro-1.png" alt="Hokshi on Deno"></p>
+<p>说实话，这个小工具离我心目中的理想型 SSG 系统还有很大的差距。当时的我有很多设想，但实在没有时间和心思去实现（加上水平很菜），所以也就作罢了，Hokshi 1.0 就这么凑合着用到了今年。<br><img src="/upload/ybsbny.jpg" alt="又不是不能用"></p>
+<h2 id="契机">契机</h2>
+<p>前几个月，在考虑是否要迁移到Astro这个当前最热门的系统时，点开了Google的AI模式。未曾想到，对Hokshi的升级改造就从这次与Gemini的对话中意外地开始了。最终的结果，我没有迁移到Astro，反而借助AI的效率彻底重写了Hokshi，做出了几年前我心里那个理想的样子。</p>
+<p>Hokshi 2.0 的基础框架，是在和Gemini的一轮轮对话中完成的，基本上是我怎么说，AI就怎么干。讨好型人格的Gemini就是这样的，我提出的任何合理、不合理的设想，它都会先来一句“这简直是天才的想法！”，然后闷头做出来。但到了后期，不断地复制粘贴让人抓狂。（为什么不一开始就用AI加持的各种 XX Code 呢？问，就是我菜。）<br><img src="/upload/gemini.jpg" alt="Gemini"></p>
+<p>就在这个时候，Codex开始流行起来。于是，我也跟着长视频的教程，将Codex+DeepSeek的组合配置好。有了合适的工具，项目的推进就跟开了挂一般，只用了一个周末就基本完成了。</p>
+<h2 id="hokshi-2-0">Hokshi 2.0</h2>
+<p>新版的系统，实现了一些能让使用体验更舒适的特性，也是当年想做但没做的：</p>
+<ul>
+<li>在构建时将Markdown文件解析入库，建立完整数据层。构建采用增量缓存，仅重新处理有变更的文件。</li>
+<li>生成一套RESTful API，向内外提供数据，用以支持可视化的后台管理界面和模板渲染等。</li>
+<li>主题模板配合API调用，与数据完全解耦。不绑定任何前端框架，目录结构完全自由，URL格式完全自定义。</li>
+<li>实现了一个现代化的Web端（后台管理界面），支持Markdown的编辑和预览，网站大大小小的配置皆可在可视化界面下完成。</li>
+<li>数据库与文章的实体文件实现了双向同步，无论在命令行下操作，还是直接在OS里更改源文件夹，还是在后台管理界面上操作，一切都是等效的。</li>
+<li>一键部署，自动执行构建、渲染、Git提交和推送。目前配合Cloudflare Pages进行免费托管。<br><img src="/upload/frame_generic_light.png" alt="Hokshi on Bun"></li>
+</ul>
+<h2 id="一些对ai的感想">一些对AI的感想</h2>
+<p>这次改造升级，让我对AI的编程能力有了直观的感受。就我对Gemini和DeepSeek的体验来看，对意图的理解很准确，效率无敌；但有时候仍然会有一些瑕疵，以及采用一些过度复杂或者过度简化的解题思路；对于一些细节问题（举例来说，某些重要参数是否需要硬编码）的自动理解也不太到位，需要人工提醒。如果开发者完全不懂代码，全盘依靠Vibe Coding写出应用，虽然能跑起来，但隐藏的问题一定是不少的。当然，没有用过更强更贵的模型，也许它们的水平更高。</p>
+
+      </div>
+
+      <hr class="post-sep">
+
+      <nav class="post-nav">
+        <div class="post-nav-side">
+          
+            
+            
+              
+              <a href="/%E5%B0%8F%E7%8E%A9%E6%84%8F/compat-hexo-themes/" class="post-nav-link post-nav-prev">
+                <span class="post-nav-arrow">←</span>
+                <span class="post-nav-label">AI帮我强行兼容了Hexo的主题</span>
+              </a>
+            
+          
+        </div>
+        <div class="post-nav-side post-nav-right">
+          
+            
+            
+              
+              <a href="/%E6%B8%B8%E8%AE%B0/netsu-shibamata/" class="post-nav-link post-nav-next">
+                <span class="post-nav-label">日旅集 - EP10：东京根津神社、柴又</span>
+                <span class="post-nav-arrow">→</span>
+              </a>
+            
+          
+        </div>
+      </nav>
+  </article>
+
+  <nav id="toc-sidebar" class="toc-sidebar" aria-label="Table of Contents">
+    <div class="toc-sticky">
+      <div class="toc-heading">目录</div>
+      <div id="toc-list-wrap" class="toc-list-wrap"></div>
+    </div>
+  </nav>
+</div>
+
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-links">
+                    
+                        <a href="https://x.com/bob_shen" target="_blank" class="footer-link">X</a>
+                    
+                        <a href="https://www.instagram.com/bobshen/" target="_blank" class="footer-link">Instagram</a>
+                    
+                        <a href="https://www.threads.com/@bobshen" target="_blank" class="footer-link">Thread</a>
+                    
+                </div>
+                <div class="footer-actions">
+                    <a href="/rss.xml" class="footer-rss" target="_blank" title="RSS Feed" aria-label="RSS Feed">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 2a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
+                    </a>
+                    <button id="back-to-top" class="footer-top-btn" aria-label="Back to top" title="返回顶部">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; Bob. 在网络的某处，与你坐下聊聊</p>
+        </footer>
+
+    </div>
+
+    <div id="mobile-overlay" class="mobile-overlay"></div>
+    <nav id="mobile-drawer" class="mobile-drawer">
+        <button id="drawer-close" class="drawer-close">✕</button>
+        <ul class="drawer-nav">
+            <li><a href="/" class="nav-link">首页</a></li>
+            <li><a href="/pages/1.html" class="nav-link">文章</a></li>
+            <li><a href="/tags/" class="nav-link">标签</a></li>
+            <li><a href="/archive/" class="nav-link">归档</a></li>
+            
+            <li><a href="/about/" class="nav-link">关于我</a></li>
+            
+        </ul>
+
+        <div class="drawer-actions">
+            <button id="theme-toggle-drawer" class="theme-btn drawer-theme-btn" aria-label="切换暗色模式">
+                <svg class="icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.364l-.707-.707M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+                <span class="drawer-btn-label">切换暗色模式</span>
+            </button>
+
+            <button id="scheme-toggle-drawer" class="scheme-btn drawer-scheme-btn" aria-label="Toggle color scheme">
+                <svg class="scheme-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                <span class="drawer-btn-label">配色方案</span>
+            </button>
+            <div class="scheme-picker" id="scheme-picker">
+                <div class="scheme-picker-grid" id="scheme-picker-grid"></div>
+            </div>
+        </div>
+
+    </nav>
+
+    <script src="/assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* --- Color Space: sRGB ---
+ * All color values below are standard sRGB hex values.
+ * No HDR or wide-gamut (P3/Rec2020) colors are used.
+ * See style.css for the full sRGB gamut lock policy. */
+
+/* --- CSS Variables (Light) --- */
+:root {
+  --accent: #d946ef;
+  --accent-hover: #c026d3;
+  --bg-tint: #fdf4ff;
+  --bg: #fbfefb;
+  --text: #1a1a1a;
+  --text-muted: #52525b;
+  --line: #e4e4e7;
+  --selection: rgba(217, 70, 239, 0.15);
+}
+
+/* --- CSS Variables (Dark) --- */
+html.dark {
+  --accent: #f0abfc;
+  --accent-hover: #f5cafd;
+  --bg-tint: #1f0a24;
+  --bg: #151515;
+  --text: #e4e4e7;
+  --text-muted: #a1a1aa;
+  --line: #2d2d30;
+  --selection: rgba(240, 171, 252, 0.25);
+}

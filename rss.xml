@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bob的小角落</title>
+    <description>在网络的某处，与你坐下聊聊</description>
+    <link>https://bobshen.com/</link>
+    <atom:link href="https://bobshen.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 13 Jun 2026 20:55:00 +0800</lastBuildDate>
+    
+    <item>
+      <title>AI帮我强行兼容了Hexo的主题</title>
+      <link>https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/compat-hexo-themes/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/compat-hexo-themes/</guid>
+      <description>最近沉溺于Vibe Coding的魅力而不可自拔。今天花了亿点点Tokens，请AI帮我完成了对Hexo主题的兼容。
+
+下载Hexo的主题包，直接放到Hokshi的主题文件夹下，切换到这个主题就能正常渲染，不需要改一行代码，丝滑到不可思议。在这背后，AI做了哪些事呢？
+
+AI参阅了Hexo的主题说明文档，对比了两套博客框架的巨大差异，实现了一个Hexo主题的兼容层。它把Hokshi的数据按照Hexo的格式喂给主题，还硬生生地弥补了逾百个Hokshi缺失的helper，并且自动识别主题采用的是 EJS 还是 Nunjucks 引擎。
+
+实例
+以上是Hexo Shiro主题的测试效果。
+
+这巨大的...</description>
+      
+      <content:encoded><![CDATA[
+        <p>最近沉溺于Vibe Coding的魅力而不可自拔。今天花了亿点点Tokens，请AI帮我完成了对Hexo主题的兼容。</p>
+<p>下载Hexo的主题包，直接放到Hokshi的主题文件夹下，切换到这个主题就能正常渲染，不需要改一行代码，丝滑到不可思议。在这背后，AI做了哪些事呢？</p>
+<p>AI参阅了Hexo的主题说明文档，对比了两套博客框架的巨大差异，实现了一个Hexo主题的兼容层。它把Hokshi的数据按照Hexo的格式喂给主题，还硬生生地弥补了逾百个Hokshi缺失的helper，并且自动识别主题采用的是 EJS 还是 Nunjucks 引擎。</p>
+<p><img src="https://bobshen.com/upload/shiro-from-hexo.jpg" alt="实例"><br>以上是Hexo Shiro主题的测试效果。</p>
+<p>这巨大的工作量，放在过去古法编程的话，显然是得不偿失的。但AI只用了几个小时，就完成了代码，并在不断实测和修正中，跑通了整个流程。新世界的大门，真的打开了。</p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Sat, 13 Jun 2026 20:55:00 +0800</pubDate>
+      
+      <category>Hokshi</category>
+      
+      <category>开发</category>
+      
+      <category>Hexo</category>
+      
+    </item>
+    
+    <item>
+      <title>借助AI，实现了理想中的blog系统</title>
+      <link>https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/developing-hokshi/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/developing-hokshi/</guid>
+      <description>前因
+2020年的时候，作为一名忠实的 PHP 爱好者，抱着试验的心态开始尝试 JavaScript，于是借助新鲜出炉的 Deno，搭配临时学的 TypeScript，做了一个没什么技术含量的 blog 系统。虽然代码很潦草，但静态 HTML 生成、多主题支持和 Github 自动部署等功能齐全，这么多年使用起来也还算顺手。彼时给这个粗糙的 SSG 项目取名为“Hokshi”，模仿的是上海话里“闪电”的发音。
+Hokshi on Deno
+
+说实话，这个小工具离我心目中的理想型 SSG 系统还有很大的差距。当时的我有很多设想，但实在没有时间和心思去实现（加上水平很菜），所以也就作罢了，Hoks...</description>
+      
+      <content:encoded><![CDATA[
+        <h2 id="前因">前因</h2>
+<p>2020年的时候，作为一名忠实的 PHP 爱好者，抱着试验的心态开始尝试 JavaScript，于是借助新鲜出炉的 Deno，搭配临时学的 TypeScript，做了一个没什么技术含量的 blog 系统。虽然代码很潦草，但静态 HTML 生成、多主题支持和 Github 自动部署等功能齐全，这么多年使用起来也还算顺手。彼时给这个粗糙的 SSG 项目取名为“Hokshi”，模仿的是上海话里“闪电”的发音。<br><img src="https://bobshen.com/upload/hokshi-intro-1.png" alt="Hokshi on Deno"></p>
+<p>说实话，这个小工具离我心目中的理想型 SSG 系统还有很大的差距。当时的我有很多设想，但实在没有时间和心思去实现（加上水平很菜），所以也就作罢了，Hokshi 1.0 就这么凑合着用到了今年。<br><img src="https://bobshen.com/upload/ybsbny.jpg" alt="又不是不能用"></p>
+<h2 id="契机">契机</h2>
+<p>前几个月，在考虑是否要迁移到Astro这个当前最热门的系统时，点开了Google的AI模式。未曾想到，对Hokshi的升级改造就从这次与Gemini的对话中意外地开始了。最终的结果，我没有迁移到Astro，反而借助AI的效率彻底重写了Hokshi，做出了几年前我心里那个理想的样子。</p>
+<p>Hokshi 2.0 的基础框架，是在和Gemini的一轮轮对话中完成的，基本上是我怎么说，AI就怎么干。讨好型人格的Gemini就是这样的，我提出的任何合理、不合理的设想，它都会先来一句“这简直是天才的想法！”，然后闷头做出来。但到了后期，不断地复制粘贴让人抓狂。（为什么不一开始就用AI加持的各种 XX Code 呢？问，就是我菜。）<br><img src="https://bobshen.com/upload/gemini.jpg" alt="Gemini"></p>
+<p>就在这个时候，Codex开始流行起来。于是，我也跟着长视频的教程，将Codex+DeepSeek的组合配置好。有了合适的工具，项目的推进就跟开了挂一般，只用了一个周末就基本完成了。</p>
+<h2 id="hokshi-2-0">Hokshi 2.0</h2>
+<p>新版的系统，实现了一些能让使用体验更舒适的特性，也是当年想做但没做的：</p>
+<ul>
+<li>在构建时将Markdown文件解析入库，建立完整数据层。构建采用增量缓存，仅重新处理有变更的文件。</li>
+<li>生成一套RESTful API，向内外提供数据，用以支持可视化的后台管理界面和模板渲染等。</li>
+<li>主题模板配合API调用，与数据完全解耦。不绑定任何前端框架，目录结构完全自由，URL格式完全自定义。</li>
+<li>实现了一个现代化的Web端（后台管理界面），支持Markdown的编辑和预览，网站大大小小的配置皆可在可视化界面下完成。</li>
+<li>数据库与文章的实体文件实现了双向同步，无论在命令行下操作，还是直接在OS里更改源文件夹，还是在后台管理界面上操作，一切都是等效的。</li>
+<li>一键部署，自动执行构建、渲染、Git提交和推送。目前配合Cloudflare Pages进行免费托管。<br><img src="https://bobshen.com/upload/frame_generic_light.png" alt="Hokshi on Bun"></li>
+</ul>
+<h2 id="一些对ai的感想">一些对AI的感想</h2>
+<p>这次改造升级，让我对AI的编程能力有了直观的感受。就我对Gemini和DeepSeek的体验来看，对意图的理解很准确，效率无敌；但有时候仍然会有一些瑕疵，以及采用一些过度复杂或者过度简化的解题思路；对于一些细节问题（举例来说，某些重要参数是否需要硬编码）的自动理解也不太到位，需要人工提醒。如果开发者完全不懂代码，全盘依靠Vibe Coding写出应用，虽然能跑起来，但隐藏的问题一定是不少的。当然，没有用过更强更贵的模型，也许它们的水平更高。</p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Wed, 10 Jun 2026 20:44:00 +0800</pubDate>
+      
+      <category>主页</category>
+      
+      <category>Hokshi</category>
+      
+      <category>开发</category>
+      
+    </item>
+    
+    <item>
+      <title>日旅集 - EP10：东京根津神社、柴又</title>
+      <link>https://bobshen.com/%E6%B8%B8%E8%AE%B0/netsu-shibamata/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E6%B8%B8%E8%AE%B0/netsu-shibamata/</guid>
+      <description>今天造访的这两处“秘境”，一边是千年神社的绚烂花事，一边是上个时代的烟火气。
+标题
+
+根津神社
+东京的春天不缺繁花与古意。想要避开人潮，一头扎进春日花海，根津神社的杜鹃盛世是一个不错的季节限定款好去处。
+
+从东京地铁根津站步行 5 分钟，便可抵达这座拥有1900年历史的古老神社，也是东京最古老的神社之一。每年4月中旬至5月初，文京杜鹃花祭如期而至，3000株百余种杜鹃铺满了山坡，将这座古老神社映衬得炫目而又浪漫。
+根津神社
+
+神社的建筑是典型的江户风格，朱红色鸟居与深色木质殿宇相映，庄重雅致。西侧的杜鹃花园是花季的主角，依斜坡地势而建，盛开时节，层层叠叠的花簇从山脚铺至山腰，深红、粉白、淡紫、...</description>
+      
+      <content:encoded><![CDATA[
+        <p>今天造访的这两处“秘境”，一边是千年神社的绚烂花事，一边是上个时代的烟火气。<br><img src="https://bobshen.com/upload/netsu.jpg" alt="标题"></p>
+<h2 id="根津神社">根津神社</h2>
+<p>东京的春天不缺繁花与古意。想要避开人潮，一头扎进春日花海，<strong>根津神社</strong>的杜鹃盛世是一个不错的季节限定款好去处。</p>
+<p>从东京地铁根津站步行 5 分钟，便可抵达这座拥有1900年历史的古老神社，也是东京最古老的神社之一。每年4月中旬至5月初，<strong>文京杜鹃花祭</strong>如期而至，3000株百余种杜鹃铺满了山坡，将这座古老神社映衬得炫目而又浪漫。<br><img src="https://bobshen.com/upload/netsu-shrine.jpg" alt="根津神社"></p>
+<p>神社的建筑是典型的江户风格，朱红色鸟居与深色木质殿宇相映，庄重雅致。西侧的杜鹃花园是花季的主角，依斜坡地势而建，盛开时节，层层叠叠的花簇从山脚铺至山腰，深红、粉白、淡紫、绯色的花互相交织，像一块织锦地毯。支付入场券后就可慢慢欣赏了。登上高处，可俯瞰整片杜鹃花海与神社全貌，红柱、繁花、绿树相映，每一帧都是治愈画面。<!--more--><br><img src="https://bobshen.com/upload/netsu-flower.jpg" alt="根津神社"></p>
+<p>承载千年历史的古社，朱红鸟居在各种品种的杜鹃花簇拥下，将江户时代的春日温柔展现得淋漓尽致，让人沉醉。<br><img src="https://bobshen.com/upload/netsu-jinja.jpg" alt="根津神社"></p>
+<h2 id="柴又">柴又</h2>
+<p>葛饰区的<strong>柴又</strong>，是电影《寅次郎的故事》的故乡，保留着浓郁的昭和风情，像一座被时光封存的下町博物馆。这儿远离都市的繁华喧嚣，老铺烟火、石板老街与温柔故事一同延续着东京的慢生活。</p>
+<p>走出京成线的柴又站，首先映入眼帘的是寅次郎与妹妹樱花的铜像，再现电影里阿寅离别故乡的经典场景。<br><img src="https://bobshen.com/upload/shibamata-statue.jpg" alt="柴又站"></p>
+<p>往前便是<strong>帝释天参道</strong>，一条长约200米的石板老街，两侧是明治、大正时期的木造老铺，屋檐低矮，暖黄色灯笼摇曳，招牌十分古朴，岁月痕迹清晰可见，大多是家族经营，传承数十年甚至上百年。<br><img src="https://bobshen.com/upload/shibamata-street.jpg" alt="帝释天参道"></p>
+<p>参道尽头，是<strong>柴又帝释天（题经寺）</strong>，一座拥有400年历史的日莲宗寺院，木质大门雕刻精美，法华经故事栩栩如生，尽显匠人匠心。寺内庭园清幽，青松、石灯、池水相映，安静雅致。</p>
+<p>东京从不是只有高楼与快节奏，抽半日时光，逛逛根津神社的杜鹃花海，或是走走柴又老街的石板路，也可在春意与烟火里，感受不一样的松弛感。</p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Sun, 17 May 2026 10:50:00 +0800</pubDate>
+      
+      <category>旅行</category>
+      
+      <category>日本</category>
+      
+      <category>东京都</category>
+      
+    </item>
+    
+    <item>
+      <title>日旅集 - EP9：公园篇·井之头、日比谷、上野</title>
+      <link>https://bobshen.com/%E6%B8%B8%E8%AE%B0/parks-in-tokyoto/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E6%B8%B8%E8%AE%B0/parks-in-tokyoto/</guid>
+      <description>一个大城市最舒服最放松的一面，往往蕴藏在都市里一座座公园的绿意里。那么本篇就来一个公园合集，写写东京（及都市圈内）三个令我印象深刻的公园吧。
+标题图
+
+井之头恩赐公园
+从新宿坐中央线20分钟到吉祥寺站，步行5分钟便可抵达井之头恩赐公园，是本地人私藏的近郊净土。
+
+公园以井之头池为核心，澄澈的湖面像一块温润的碧玉，四周被茂密的林木环绕，春有樱花垂落水面，夏有浓荫蔽日，冬有寒林静水，四季景致都值得一提。当然，最标志的景观是在樱花绽放的春日里，租一艘天鹅船，慢悠悠划行在湖面，穿梭在水波和花瓣之间。不过赏樱期是旺季，樱花和安逸不可得兼。我去的时候正值盛夏，完全没有游客的喧嚣，满目的绿色将旅途的浮躁一扫...</description>
+      
+      <content:encoded><![CDATA[
+        <p>一个大城市最舒服最放松的一面，往往蕴藏在都市里一座座公园的绿意里。那么本篇就来一个公园合集，写写东京（及都市圈内）三个令我印象深刻的公园吧。<br><img src="https://bobshen.com/upload/Parks.jpg" alt="标题图"></p>
+<h2 id="井之头恩赐公园">井之头恩赐公园</h2>
+<p>从新宿坐中央线20分钟到吉祥寺站，步行5分钟便可抵达井之头恩赐公园，是本地人私藏的近郊净土。</p>
+<p>公园以井之头池为核心，澄澈的湖面像一块温润的碧玉，四周被茂密的林木环绕，春有樱花垂落水面，夏有浓荫蔽日，冬有寒林静水，四季景致都值得一提。当然，最标志的景观是在樱花绽放的春日里，租一艘天鹅船，慢悠悠划行在湖面，穿梭在水波和花瓣之间。不过赏樱期是旺季，樱花和安逸不可得兼。我去的时候正值盛夏，完全没有游客的喧嚣，满目的绿色将旅途的浮躁一扫而空。<!--more--><br><img src="https://bobshen.com/upload/inokashira-trees.jpg" alt="井之头恩赐公园"></p>
+<p>在空旷的淡季，沿湖步道蜿蜒，林间藏着古朴的神社，供奉着弁财天，安静得能听见风铃轻响。公园西南角紧邻三鹰之森吉卜力美术馆，但需预约才能参观。逛累了坐在湖畔长椅上，晒着太阳发发呆，便是最惬意的时光。<br><img src="https://bobshen.com/upload/Inokashira-shrine.jpg" alt="井之头恩赐公园"></p>
+<h2 id="日比谷公园">日比谷公园</h2>
+<p>乘车前往千代田区，探访日比谷公园。它是日本第一座西式近代公园，毗邻银座、皇居与霞关CBD，开放式的园区与都市无缝衔接。推荐你在商圈购物后踏入这里，短暂地从钢筋水泥的喧嚣中解脱出来。<br><img src="https://bobshen.com/upload/hibiya-pool.jpg" alt="日比谷公园"></p>
+<p>公园的气质是西式优雅与日式禅意的完美融合。入口处的喷泉广场最具标志性，巴洛克式喷泉在阳光下溅起晶莹水花，池边绿植环绕，彩色花坛四季盛放，将这里装点得如童话花园。不远处的日式庭园里，江户时代留存的“心字池”静谧如画，池水倒映着青松与古朴石灯，苍鹭与野鸭偶尔在水面休憩，岁月静好。林荫道干净整洁，明治时期设计的S型步道两旁，树木枝繁叶茂，完美诠释了都市与自然的共生。<br><img src="https://bobshen.com/upload/hibiya-park.jpg" alt="日比谷公园"></p>
+<h2 id="上野恩赐公园">上野恩赐公园</h2>
+<p>最后一站，来到台东区的上野恩赐公园。作为日本第一座公园，这里曾为皇室所有，如今更像一座“文化综合体”，1200多棵樱花树、6座博物馆、古老神社与不忍池相融，自然与人文在此碰撞出独特魅力。</p>
+<p>上野的浪漫，首推樱花。作为日本赏樱名所，400米长的樱花大道上，染井吉野樱繁花满枝，形成粉色拱门，风过处落樱如雨，鲁迅笔下“上野的樱花烂漫的时节，望去确也像绯红的轻云”，便是这般景致。游人席地而坐，饮酒赏花，是东京最具代表性的“花见”盛景。<br><img src="https://bobshen.com/upload/ueno-sakura.jpg" alt="上野公园"></p>
+<p>“不忍池”则是上野的夏日名片，荷花接天连碧，值得一看。<br><img src="https://bobshen.com/upload/ueno-lotus.jpg" alt="上野公园"></p>
+<p>公园的灵魂，藏在深厚的人文底蕴里。东京国立博物馆坐落于此，浮世绘、佛像静静陈列，诉说着千年艺术史；国立西洋美术馆里，莫奈、毕加索的名作熠熠生辉。<br><img src="https://bobshen.com/upload/ueno-museum.jpg" alt="上野公园"></p>
+<h2 id="结语">结语</h2>
+<p>三座公园，三种模样，但都是属于大都市的松弛。</p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Sun, 10 May 2026 20:44:00 +0800</pubDate>
+      
+      <category>旅行</category>
+      
+      <category>日本</category>
+      
+      <category>东京都</category>
+      
+    </item>
+    
+    <item>
+      <title>日旅集 - EP8：舞子公园、后乐园、豪德寺</title>
+      <link>https://bobshen.com/%E6%B8%B8%E8%AE%B0/maiko-korakuen-gotokuji/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E6%B8%B8%E8%AE%B0/maiko-korakuen-gotokuji/</guid>
+      <description>感谢公众号的各位看官支持。从这篇起，也会将一些零碎的小景点汇总在一篇里，照例是想到哪儿写到哪儿。
+标题图
+
+舞子公园
+舞子公園（まいここうえん）是神户的一处拍照打卡胜地。从神户三宫站出发，乘坐山阳本线，从须磨站开始，窗外的风景就切换到了延绵不绝的蔚蓝海岸线。按捺住激动的心情直到舞子站，下车后往海边走就是舞子公园。
+
+作为舞子公园的最大看点之一，这里有着拍摄明石海峡大桥的最佳地点。大桥横亘于明石海峡之上，连接神户市和淡路市，据说是世界上最长的吊桥。在舞子公园，可以无遮挡地拍摄到大桥，也可以眺望到明石市的天际线。
+明石海峡大桥
+
+公园内的“梦视镜”（夢レンズ）是一个甜甜圈形状的独特雕塑，由三种不同...</description>
+      
+      <content:encoded><![CDATA[
+        <p>感谢公众号的各位看官支持。从这篇起，也会将一些零碎的小景点汇总在一篇里，照例是想到哪儿写到哪儿。<br><img src="https://bobshen.com/upload/ep9_title.jpg" alt="标题图"></p>
+<h2 id="舞子公园">舞子公园</h2>
+<p>舞子公園（まいここうえん）是神户的一处拍照打卡胜地。从神户三宫站出发，乘坐山阳本线，从须磨站开始，窗外的风景就切换到了延绵不绝的蔚蓝海岸线。按捺住激动的心情直到舞子站，下车后往海边走就是舞子公园。</p>
+<p>作为舞子公园的最大看点之一，这里有着拍摄明石海峡大桥的最佳地点。大桥横亘于明石海峡之上，连接神户市和淡路市，据说是世界上最长的吊桥。在舞子公园，可以无遮挡地拍摄到大桥，也可以眺望到明石市的天际线。<!--more--><br><img src="https://bobshen.com/upload/maiko-bridge.jpg" alt="明石海峡大桥"></p>
+<p>公园内的“梦视镜”（夢レンズ）是一个甜甜圈形状的独特雕塑，由三种不同的岩石纹理石材打造。透过“甜甜圈”的圆心，可以将海峡大桥和濑户内海的湛蓝背景完美地“裁剪”为正圆形，的确是一个梦幻的视角。<br><img src="https://bobshen.com/upload/maiko-yumelens.jpg" alt="梦视镜"></p>
+<p>此座梦幻雕塑的边上，就是孙文纪念馆（移情阁），自然对于来自中国的游客有着特殊的意义。这里展示了孙中山先生的历史资料，也是重要文化遗产。</p>
+<p>舞子公园离神户市区很近，值得专程前往。海边风大，需注意防护。</p>
+<h2 id="冈山后乐园">冈山后乐园</h2>
+<p>後楽園（こうらくえん）被誉为日本三大名园之一，从冈山站乘车至城下站，下车后步行10分钟可达。</p>
+<p>“冈山后乐园面积宽广，景点众多。园林占地约 14 公顷，内设一处茶叶种植园、一间鸟舍、几片池塘、几间古代茶室，还有旧时供封建领主歇息的休息室。 ”（by 日本旅游局）</p>
+<p>由于后乐园就在冈山城的边上，因此从园子里就能看到冈山城，以园为前景拍摄冈山城也是一个经典的点位。<br><img src="https://bobshen.com/upload/korakuen-okayama.jpg" alt="远处的冈山城"></p>
+<p>后乐园的中心是一个名为“泽池”的大池塘，边上就是人造假山——唯心山，山上有个瞭望台，可将池水一览无遗。<br><img src="https://bobshen.com/upload/korakuen-ike.jpg" alt="池塘"></p>
+<h2 id="豪德寺">豪德寺</h2>
+<p>豪徳寺（ごうとくじ）位于东京世田谷区，是东京三大招财猫神社之一。<br><img src="https://bobshen.com/upload/gotokuji-cat.jpg" alt="豪德寺招财猫"></p>
+<p>去往豪德寺可以乘坐小田急线。一出站，便能感受到这个街区的宁谧气质。从电车站步行到豪德寺需要10分钟左右，一路上必经文艺感满满的商店街，可以边逛边赶路。</p>
+<p>豪德寺本身同样散发着宁静安详的氛围，寺内的亮点自然是整齐陈列着的千余只大大小小的招财猫。事实上，豪德寺的猫应该是“招福猫”，它们是白猫、右手高举（象征招来福气而非财气）。传说在江户时代，住持养的一只名为“玉（Tama）”的小猫，在藩主路过避雨时，招手将其引入寺中。住持以此机缘与藩主结缘，使其重修寺庙。现在，参拜者会将写好愿望的招福猫供奉在寺内，久而久之就形成了“满溢而出”的壮观场景。如果愿望实现，人们会亲自把那只招财猫买回家，或者再购买新的来感谢神明。<br><img src="https://bobshen.com/upload/gotokuji-neko.jpg" alt="豪德寺招财猫"></p>
+<p>除了招财猫，豪德寺本身也有很值得一看的植被和风景。可以在寺内买到不同尺寸的招财猫，选择一个合适大小的“福猫”带回家，亦是不错的纪念品。<br><img src="https://bobshen.com/upload/gotokuji.jpg" alt="豪德寺"></p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Fri, 08 May 2026 09:00:00 +0800</pubDate>
+      
+      <category>旅行</category>
+      
+      <category>日本</category>
+      
+      <category>兵库县</category>
+      
+      <category>冈山县</category>
+      
+      <category>东京都</category>
+      
+    </item>
+    
+    <item>
+      <title>日旅集 - EP7：天桥立 × 伊根</title>
+      <link>https://bobshen.com/%E6%B8%B8%E8%AE%B0/amanohashidate-ine/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E6%B8%B8%E8%AE%B0/amanohashidate-ine/</guid>
+      <description>这一篇记录京都府丹后半岛的天橋立（あまのはしだて，Amanohashidate）与伊根（いね，Ine）。
+天桥立
+
+交通
+天桥立和伊根船屋，一个是日本三景之一，长条沙洲跨海而立；一个是原生态临海船屋渔村，风格完全不一样，但刚好可以串成一条线。单独跑一趟有点折腾，顺路一并走完，时间和路程都最合适，因此也是大部分游客选择的常规玩法。
+顺路
+
+但是，这片地区的公共交通着实不够友好。远离市区，电车的班次少、间隔久，景点之间转车也麻烦。所以我选择了最省心的方式，那就是跟当地小团一日游。不用操心交通问题，体验会舒服很多。
+
+天桥立
+根据维基百科的说法，天桥立的西面是被称为阿苏海的内海，东面则是宫津湾，其本...</description>
+      
+      <content:encoded><![CDATA[
+        <p>这一篇记录京都府丹后半岛的天橋立（あまのはしだて，Amanohashidate）与伊根（いね，Ine）。<br><img src="https://bobshen.com/upload/amanohashidate_title.jpg" alt="天桥立"></p>
+<h2 id="交通">交通</h2>
+<p>天桥立和伊根船屋，一个是日本三景之一，长条沙洲跨海而立；一个是原生态临海船屋渔村，风格完全不一样，但刚好可以串成一条线。单独跑一趟有点折腾，顺路一并走完，时间和路程都最合适，因此也是大部分游客选择的常规玩法。<!--more--><br><img src="https://bobshen.com/upload/amanohashi_direction.jpg" alt="顺路"></p>
+<p>但是，这片地区的公共交通着实不够友好。远离市区，电车的班次少、间隔久，景点之间转车也麻烦。所以我选择了最省心的方式，那就是跟当地小团一日游。不用操心交通问题，体验会舒服很多。</p>
+<h2 id="天桥立">天桥立</h2>
+<p>根据维基百科的说法，天桥立的西面是被称为阿苏海的内海，东面则是宫津湾，其本身是由流入日本海的洋流带入宫津湾的沙子和阿苏海的泥沙长期堆积而成的沙洲。天气晴朗时，从高处俯瞰，沙洲两侧的海水颜色深浅不同，十分神奇。沙洲上松林成片，视野很开阔，骑单车一刻钟可贯通。<br><img src="https://bobshen.com/upload/amanohashidate_overview.jpg" alt="天桥立"></p>
+<p>海湾的两岸都有可以从高处俯瞰沙洲的观景点。南侧的是天桥立View Land公园，北侧则是伞松公园。两个公园都有缆车可以上到观景台，可以选择传统的无遮挡座椅，也可选择封闭轿厢。View Land看到的沙洲较为蜿蜒，如果你玩过《旅行青蛙》，这里看到的景色也是游戏中标志性的明信片所描绘的场景。而在伞松公园，你看到的沙洲更笔直、也显得更有气势。<br><img src="https://bobshen.com/upload/kaeru.jpeg" alt="旅行青蛙"></p>
+<p>往返两岸可以坐观光渡轮，航程不长。船一开，成群海鸥会跟着船飞行盘旋。可以提前准备小零食，在甲板上喂海鸥，海风、海浪加上海鸥环绕，氛围很轻松，是这段行程里很有记忆点的一段。<br><img src="https://bobshen.com/upload/amanohashidate_seagull.jpg" alt="天桥立观光船"></p>
+<p>一般而言，一日团都会抵达南侧海岸的天桥立车站附近，靠近智恩寺。如果时间充裕，可以逛一逛。然后就可以顺路去坐观光船了。游览完伞松公园，乘船回到南侧后可以寻找餐厅解决午餐，因为下午要去的伊根真的没什么吃的。</p>
+<h2 id="伊根船屋">伊根船屋</h2>
+<p>离开天桥立，还要驱车15公里，就到了伊根，一座海边的古朴村庄。</p>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=619247359&bvid=BV1N84y1m7ag&cid=1286793465&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 90%; aspect-ratio: 16 / 9;"></iframe><p>这里最标志性的景观就是海边船屋。一户一户挨着海岸线建起，一楼停船、二楼住人，是当地渔民世代的生活居所。整个渔村没有过度商业化，没有密集的商铺和网红店，保留着原本的渔村模样。<br><img src="https://bobshen.com/upload/ine.jpg" alt="伊根船屋"></p>
+<p>沿着海边步道慢慢散步，能看到停靠的渔船、错落的木造船屋。这里的海面平静，偶尔有渔船缓缓驶出港湾。空气里带着淡淡的海味，安静、松弛，没有拥挤的人流，很适合慢慢闲逛、吹海风。可以随便找一处海边坐下，看海浪轻轻拍岸，整个人都会慢下来。也可以搭船游览海湾。<br><img src="https://bobshen.com/upload/ine_sea.jpg" alt="伊根船屋"></p>
+<h2 id="结语">结语</h2>
+<p>丹后半岛不算热门打卡线路，但如果碰巧你在关西，又碰巧想要远离游客，那么还是值得专程前往，安安静静感受日本海边最朴素的风景与生活。</p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Fri, 01 May 2026 09:00:00 +0800</pubDate>
+      
+      <category>旅行</category>
+      
+      <category>日本</category>
+      
+      <category>京都府</category>
+      
+    </item>
+    
+    <item>
+      <title>复刻了2008年的blog主题</title>
+      <link>https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/grass-instinct/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/grass-instinct/</guid>
+      <description>Old Theme
+
+这是2008年使用的主题，命名为Grass Instinct。后来随着域名被取消，blog换了程序，这个主题也就不再使用了。再后来，原始的文件也都找不到了。
+
+年初的时候从历史纪录里发现了一张截图，于是想着能不能重现这个我曾经非常喜欢的主题。拖拖拉拉施工了几个月，终于复刻成功了。（其间让Trae做了一版，结果完全不可用，最后还是回到古法手搓。）
+
+交互的部分试着用了htmx，对于轻交互的静态网页来说还是挺香的。但说起来，这种后端返回html的做法，似乎又回到了PHP时代。这何尝不是一种技术的轮回呢。
+
+new Theme...</description>
+      
+      <content:encoded><![CDATA[
+        <p><img src="https://bobshen.com/upload/grass_old.jpg" alt="Old Theme"></p>
+<p>这是2008年使用的主题，命名为Grass Instinct。后来随着域名被取消，blog换了程序，这个主题也就不再使用了。再后来，原始的文件也都找不到了。</p>
+<p>年初的时候从历史纪录里发现了一张截图，于是想着能不能重现这个我曾经非常喜欢的主题。拖拖拉拉施工了几个月，终于复刻成功了。（其间让Trae做了一版，结果完全不可用，最后还是回到古法手搓。）<!--more--></p>
+<p>交互的部分试着用了htmx，对于轻交互的静态网页来说还是挺香的。但说起来，这种后端返回html的做法，似乎又回到了PHP时代。这何尝不是一种技术的轮回呢。</p>
+<p><img src="https://bobshen.com/upload/grass_new.png" alt="new Theme"></p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Tue, 21 Apr 2026 11:00:00 +0800</pubDate>
+      
+      <category>主页</category>
+      
+    </item>
+    
+    <item>
+      <title>日旅集 - EP6：宫岛</title>
+      <link>https://bobshen.com/%E6%B8%B8%E8%AE%B0/miyajima/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E6%B8%B8%E8%AE%B0/miyajima/</guid>
+      <description>本篇记录日本三景之一，位于广岛县的宫岛。
+宫岛
+
+宫岛又称严岛，位于日本广岛县西南部的广岛湾西部，1996年严岛神社与弥山原始森林被列入世界文化遗产名录。这座面积约30平方公里的小岛，气候温暖、林木茂密，还生活着被视为神之使者的温顺小鹿。
+宫岛的小鹿
+
+从广岛市区出发，坐JR到宫岛口站，之后步行5分钟就到轮渡码头。10分钟的航程特别平稳，站在甲板上就能远远望见海上鸟居和弥山的轮廓。
+宫岛渡轮
+
+下船后走一小段路，就到了严岛神社。这座始建于公元593年的海上木制神社，历经多次重建，却依旧完好保留着平安时代晚期的模样。朱红廊柱映着碧海蓝天，木质栈道慢慢延伸到海里。
+严岛神社
+
+海上鸟居每天的涨潮和...</description>
+      
+      <content:encoded><![CDATA[
+        <p>本篇记录日本三景之一，位于广岛县的宫岛。<br><img src="https://bobshen.com/upload/miyajima_title.jpg" alt="宫岛"></p>
+<p>宫岛又称严岛，位于日本广岛县西南部的广岛湾西部，1996年严岛神社与弥山原始森林被列入世界文化遗产名录。这座面积约30平方公里的小岛，气候温暖、林木茂密，还生活着被视为神之使者的温顺小鹿。<!--more--><br><img src="https://bobshen.com/upload/miyajima_deer.jpg" alt="宫岛的小鹿"></p>
+<p>从广岛市区出发，坐JR到宫岛口站，之后步行5分钟就到轮渡码头。10分钟的航程特别平稳，站在甲板上就能远远望见海上鸟居和弥山的轮廓。<br><img src="https://bobshen.com/upload/miyajima_ferry.jpg" alt="宫岛渡轮"></p>
+<p>下船后走一小段路，就到了严岛神社。这座始建于公元593年的海上木制神社，历经多次重建，却依旧完好保留着平安时代晚期的模样。朱红廊柱映着碧海蓝天，木质栈道慢慢延伸到海里。<br><img src="https://bobshen.com/upload/miyajima_shrine.jpg" alt="严岛神社"></p>
+<p>海上鸟居每天的涨潮和退潮时分有两种样子。退潮时，鸟居的基座露出来，人们能从沙石路走近它，近距离感受那一抹斑驳的朱红。涨潮时，鸟居就像漂浮在海面上一般，这就是宫岛最具代表性的建筑。通过官网查询每天的潮起潮落，留出充足的时间在岛上，即可捕捉到两种不同的海上鸟居风景。<br><img src="https://bobshen.com/upload/miyajima_torii.jpg" alt="严岛神社鸟居"></p>
+<p>在等待潮水涨落的时候，可以跟着指示牌走到红叶谷公园附近的缆车点，坐循环式缆车上弥山。缆车耗时少于20分钟，终点是狮子岩。从狮子岩的山顶展望台向下俯瞰，整座宫岛、蔚蓝的濑户内海，还有远处连绵的山脉，全都映入眼帘，是宫岛不容错过的胜境。<br><img src="https://bobshen.com/upload/miyajima_mountain_top.jpg" alt="从山顶俯瞰"></p>
+<p>离开宫岛前，不妨顺路逛一下神社边上的商店街。牡蛎料理值得一试，还有星鳗饭、小鹿造型馒头等本地美食，以及鸟居造型的小纪念品，路上偶尔会遇到温顺的小鹿，给旅程加了不少乐趣。</p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Sat, 04 Apr 2026 11:00:00 +0800</pubDate>
+      
+      <category>旅行</category>
+      
+      <category>日本</category>
+      
+      <category>广岛县</category>
+      
+    </item>
+    
+    <item>
+      <title>日旅集 - EP5：飞騨高山 × 白川乡</title>
+      <link>https://bobshen.com/%E6%B8%B8%E8%AE%B0/takayama-shirogawa/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E6%B8%B8%E8%AE%B0/takayama-shirogawa/</guid>
+      <description>这篇写岐阜县的飞騨高山与白川乡。
+高山+白川乡
+高山（たかやま，Takayama）是日本岐阜县北部（飞驒地方）的一个市。该市为日本面积最大的市町村，甚至超过香川县和大阪府，相当于整个东京都的面积。该市有“飞驒的小京都”之称。（Source：维基百科）
+
+为什么来这里
+冬天的白川乡点灯太火，导致很多人忽略了夏天。选择夏末的9月出发，可以避开拥挤的人潮。上海直飞名古屋，然后一路JR北上即可，两个多小时就能到达高山站。从高山坐浓飞大巴可以直奔白川乡，也只需一小时左右。整个行程只要两到三天，慢慢逛完的节奏正好。
+JR车票
+
+宫川朝市：高山的清晨日常
+住宿在高山，早起去宫川朝市。它沿宫川河岸铺开，是日本...</description>
+      
+      <content:encoded><![CDATA[
+        <p>这篇写岐阜县的飞騨高山与白川乡。<br><img src="https://bobshen.com/upload/takayama_title.jpg" alt="高山+白川乡"></p>
+<blockquote>
+<p>高山（たかやま，Takayama）是日本岐阜县北部（飞驒地方）的一个市。该市为日本面积最大的市町村，甚至超过香川县和大阪府，相当于整个东京都的面积。该市有“飞驒的小京都”之称。（Source：维基百科）</p>
+</blockquote>
+<h3 id="为什么来这里">为什么来这里</h3>
+<p>冬天的白川乡点灯太火，导致很多人忽略了夏天。选择夏末的9月出发，可以避开拥挤的人潮。上海直飞名古屋，然后一路JR北上即可，两个多小时就能到达高山站。从高山坐浓飞大巴可以直奔白川乡，也只需一小时左右。整个行程只要两到三天，慢慢逛完的节奏正好。<br><img src="https://bobshen.com/upload/takayama_ticket.jpg" alt="JR车票"></p>
+<h3 id="宫川朝市-高山的清晨日常">宫川朝市：高山的清晨日常</h3>
+<p>住宿在高山，早起去宫川朝市。它沿宫川河岸铺开，是日本三大朝市之一，每天清晨都有。<!--more--><br><img src="https://bobshen.com/upload/takayama_river.jpg" alt="宫川"></p>
+<p>摊位其实不长，一眼便望到了头。会有本地的婆婆叔叔摆着新鲜蔬菜、渍物、手工艺品，还有现做的饭团与小食。没有网红吆喝，就是当地人的日常采购。水流声、叫卖声、伴着几句寒暄，很踏实。<br><img src="https://bobshen.com/upload/takayama_market.jpg" alt="朝市"></p>
+<p>兜完朝市（一纵），可以把宫川沿岸的商店街（一横）顺便都逛一逛，这也是前往高山阵屋的必经之路。<br><img src="https://bobshen.com/upload/takayama_river2.jpg" alt="宫川"></p>
+<h3 id="高山阵屋-江户时代的衙门痕迹">高山阵屋：江户时代的衙门痕迹</h3>
+<p>朝市之后步行去高山阵屋。这是日本现存唯一的町奉行所遗迹，国家级历史遗迹，曾是飞騨地区的行政中心。<br><img src="https://bobshen.com/upload/takayama_zhenwu.jpg" alt="高山阵屋"></p>
+<p>建筑是沉稳的木造，地板走起来有轻微声响。内部保留了当时的办公空间、审讯间、仓库等，陈设简单，能看出当年公务的模样。庭院不大，草木修剪整齐，夏日树荫很凉快。没有华丽装饰，胜在真实。站在院中，能想象几百年前这里处理文书的日常。</p>
+<h3 id="飞騨牛-这一趟的味觉主线">飞騨牛：这一趟的味觉主线</h3>
+<p>来飞騨，一定要吃飞騨牛。选了酒店边一家老牌的烧肉店进行午餐。飞騨牛肉的肉质纹理细腻，烤到微焦，油脂香柔，不用重酱就很好吃。配一碗白米饭与味噌汤，简直一本满足。<br><img src="https://bobshen.com/upload/takayama_beef.jpg" alt="飞騨牛"></p>
+<h3 id="夏季白川乡-绿意里的合掌村">夏季白川乡：绿意里的合掌村</h3>
+<p>从高山坐车约一小时，抵达白川乡。网图多为冬天雪景，确实一绝。但夏天这里是满眼绿色，也特有感觉。合掌造木屋连片坐落在山谷中，人字形的茅草屋顶靠木榫与绳索固定，是世界文化遗产。<br><img src="https://bobshen.com/upload/takayama_house.jpg" alt="白川乡"></p>
+<p>水田青绿，溪流清澈，四周青山环绕。走在村落小径，倾听虫鸣与水流，夏日的美好（和炎热）便在此刻具象化了。<br><img src="https://bobshen.com/upload/takayama_overview.jpg" alt="白川乡"></p>
+<p>通过20分钟的登山道就可登上观景台，将整片合掌村落与山景尽收眼底。没有灯光秀，没有大雪，却更贴近这座村落本来的样子 —— 朴素、安稳、天然。村里有几间合掌造开放参观，也有简单的饮食店和小卖部。逛上大半天不成问题。</p>
+<h3 id="尾记">尾记</h3>
+<p>高山的朝市、阵屋、老街，是安静的历史与日常；白川乡的合掌屋与青山，是自然与建筑的默契。夏天的飞騨与白川乡，不惊艳，却让人不虚此行。<br><img src="https://bobshen.com/upload/takayama_hidaniku.jpg" alt="飞騨牛"></p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Sat, 21 Mar 2026 22:00:00 +0800</pubDate>
+      
+      <category>旅行</category>
+      
+      <category>日本</category>
+      
+      <category>岐阜县</category>
+      
+    </item>
+    
+    <item>
+      <title>日旅集 - EP4：高松</title>
+      <link>https://bobshen.com/%E6%B8%B8%E8%AE%B0/takamatsu/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E6%B8%B8%E8%AE%B0/takamatsu/</guid>
+      <description>来到这个系列的第四篇，去高松邂逅山海与岛屿。
+Takamatsu
+高松（たかまつ，Takamatsu）是日本香川县的首府，坐落在四国岛东北部的濑户内海沿岸，既是香川的交通与文化核心，更是通往濑户内海诸岛的“跳岛起点”，直岛、丰岛、小豆岛皆从这里乘船可达。(Source: 濑户内海观光局)
+
+丸龟町商业街与北滨Alley
+市中心的丸龟町商业街，是日本最长的拱顶商业街，2.5公里的街道，被赞岐乌冬面的热气熏陶出了最为地道的市井味道。来到高松，每天恨不得两碗乌冬面。即便不小心错过了饭点没有餐食可选，仍可以随便拐进一家街角的乌冬面店，点一碗天妇罗乌冬。
+高松
+
+从丸龟町走到高松港，十分钟的路程便到了北...</description>
+      
+      <content:encoded><![CDATA[
+        <p>来到这个系列的第四篇，去高松邂逅山海与岛屿。<br><img src="https://bobshen.com/upload/takamatsu_title.jpg" alt="Takamatsu"></p>
+<blockquote>
+<p>高松（たかまつ，Takamatsu）是日本香川县的首府，坐落在四国岛东北部的濑户内海沿岸，既是香川的交通与文化核心，更是通往濑户内海诸岛的“跳岛起点”，直岛、丰岛、小豆岛皆从这里乘船可达。(Source: 濑户内海观光局)</p>
+</blockquote>
+<h3 id="丸龟町商业街与北滨alley">丸龟町商业街与北滨Alley</h3>
+<p>市中心的丸龟町商业街，是日本最长的拱顶商业街，2.5公里的街道，被赞岐乌冬面的热气熏陶出了最为地道的市井味道。来到高松，每天恨不得两碗乌冬面。即便不小心错过了饭点没有餐食可选，仍可以随便拐进一家街角的乌冬面店，点一碗天妇罗乌冬。<br><img src="https://bobshen.com/upload/takamatsu_sea.jpg" alt="高松"></p>
+<p>从丸龟町走到高松港，十分钟的路程便到了北滨Alley。这片由老仓库改造的文创区，是高松的文艺灵魂所在。斑驳的水泥墙、复古的铁艺窗，面朝濑户内海的工业风咖啡馆里，坐满了文艺青年。选了一家靠窗的位置，点一杯冰美式，海风带着淡淡的咸意吹进来。<!--more--><br><img src="https://bobshen.com/upload/takamatsu_alley.jpg" alt="北滨Alley"></p>
+<h3 id="栗林公园-一步一景的禅意">栗林公园，一步一景的禅意</h3>
+<p>栗林公园 —— 这座江户时代的回游式大名庭，是日本三大名园中唯一的“特别名胜”。<br><img src="https://bobshen.com/upload/takamatsu_ritsurin.JPG" alt="栗林公园"></p>
+<p>走进公园，池泉映着青松与亭台，像一幅徐徐展开的山水画。在红叶季来到这里，沿着环湖的步道慢走，每拐一个弯都是不一样的景致。曲桥跨水，石灯映波，红枫与青松交错，锦鲤在池中游弋，没有喧嚣，只有风吹过树叶的沙沙声。<br><img src="https://bobshen.com/upload/takamatsu_momiji.jpg" alt="栗林公园"></p>
+<h3 id="小豆岛-濑户内海的诗与远方">小豆岛，濑户内海的诗与远方</h3>
+<p>从高松港坐渡轮，一小时便抵达了小豆岛。这座被橄榄树与海水浸润的离岛，是濑户内海的宝藏，《魔女宅急便》《第八日的蝉》都曾在这里取景。<br><img src="https://bobshen.com/upload/takamatsu_ferry.jpg" alt="高松渡轮"></p>
+<p>小豆岛最著名的景点，便是大名鼎鼎的天使之路。这是一条随潮汐隐现的砂石步道，每日只有退潮时才会露出海面，连接着岸边与远处的小岛，被岛民称作“神明的浪漫脚本”。<br><img src="https://bobshen.com/upload/takamatsu_angels_road.jpg" alt="天使之路"></p>
+<p>在退潮的时间赶到，可以看见海面缓缓退去，一条蜿蜒的砂路从海边延伸向远方，海水轻轻漫过身旁陌生人的脚踝。夕阳西下，涨潮的速度很快，不过半小时，沙石路便被海水慢慢覆盖，只留下一片无际的洋面，让人舍不得离开。</p>
+<h3 id="寒霞溪-山海间的壮阔">寒霞溪，山海间的壮阔</h3>
+<p>相比橄榄公园等景点，寒霞溪不是非常知名，确实红叶季的名所。200万年的风霜雕琢出嶙峋的山石与奇险的峭壁，深秋的红叶染上枝头，添了几分诗意。坐缆车缓缓登上山，脚下是赤红的岩壁与葱郁的林木，远处的濑户内海波光粼粼，一座座小岛像黛色的音符浮在蓝缎上，壮阔的景色让人忍不住惊叹。<br><img src="https://bobshen.com/upload/takamatsu_hanxiaxi.jpg" alt="寒霞溪"></p>
+<h3 id="散策-把时间交给濑户内海">散策，把时间交给濑户内海</h3>
+<p>沿着高松港慢慢逛也是一个不错的选择。路过种满樱花的步道，想象着春天满树繁花的样子，路过街边的小公园，坐在长椅上发呆。累了，便在海边的石阶上坐下，看着渡轮来来往往，海面泛着细碎的光，远处的直岛若隐若现。即便厌倦了咖喱乌冬的滋味，也可以尝下当地有名的骨付鸡，配上冰镇啤酒，大快朵颐。</p>
+<p>在濑户内海艺术祭之外，高松也是值得一游的四国宝藏呢。<br><img src="https://bobshen.com/upload/takamatsu_castle.jpg" alt="高松城迹"></p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Fri, 13 Mar 2026 09:00:19 +0800</pubDate>
+      
+      <category>旅行</category>
+      
+      <category>日本</category>
+      
+      <category>香川县</category>
+      
+    </item>
+    
+    <item>
+      <title>日旅集 - EP3：尾道</title>
+      <link>https://bobshen.com/%E6%B8%B8%E8%AE%B0/onomichi/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E6%B8%B8%E8%AE%B0/onomichi/</guid>
+      <description>第三篇，回忆一下盛夏的濑户内边小城——尾道（おのみち，Onomichi）。
+
+Onomichi Title
+尾道市是位于日本广岛县东南部的城市，位处冈山市与广岛市两个大都会区之中间处；辖区还包括濑户内海上的向岛、生口岛等。(Source: Wikipedia)
+
+反复被种草
+2024年 - 2025年初，B站的各大日本旅游Up主们，不约而同地反复来到尾道这个地方，他们的理由出奇地一致：安逸、文学气质浓重的海边小镇，可以在这里住上很久。
+
+看多了，对这个地方印象也越来越深。安静的坡道、海边的房子、濑户内海的气息，好像隔着屏幕就能感受到。渐渐地，这成了我特别想亲自去看看的地方。
+
+于是在2025年...</description>
+      
+      <content:encoded><![CDATA[
+        <p>第三篇，回忆一下盛夏的濑户内边小城——尾道（おのみち，Onomichi）。</p>
+<p><img src="https://bobshen.com/upload/onomichi_title.jpg" alt="Onomichi Title"></p>
+<blockquote>
+<p>尾道市是位于日本广岛县东南部的城市，位处冈山市与广岛市两个大都会区之中间处；辖区还包括濑户内海上的向岛、生口岛等。(Source: Wikipedia)</p>
+</blockquote>
+<h2 id="反复被种草">反复被种草</h2>
+<p>2024年 - 2025年初，B站的各大日本旅游Up主们，不约而同地反复来到尾道这个地方，他们的理由出奇地一致：安逸、文学气质浓重的海边小镇，可以在这里住上很久。</p>
+<p>看多了，对这个地方印象也越来越深。安静的坡道、海边的房子、濑户内海的气息，好像隔着屏幕就能感受到。渐渐地，这成了我特别想亲自去看看的地方。</p>
+<p>于是在2025年的夏天，结束了一段忙碌的工作之后，终于踏上了我的“日本中国地区”旅行。从上海直飞广岛，并且留出了一天半时间给尾道。从广岛站坐JR新干线，在福山换乘普通列车，就到了心心念念的这座小城。<br><img src="https://bobshen.com/upload/onomichi_street.jpg" alt="尾道的街"></p>
+<h2 id="本通商店街">本通商店街</h2>
+<p>由于下午在宫岛多逗留了一阵子，导致我到达尾道的时候已近黄昏。只能去往本通商店街先感受一下气氛了。</p>
+<p>本通就在尾道站的边上。这是日本每个城市都有的那种商店街，而和其他小城的同类一样，如今的尾道本通也随着人口的减少而稍显破败。天色还没有暗，街道里却已几乎无人。虽然第二天我又在商店街来回走了两三趟，但第一晚它迎接我的却是“下班”后的冷清。一路走下来，店铺大多已经打烊。<!--more--><br><img src="https://bobshen.com/upload/onomichi_market.jpg" alt="尾道本通商店街"></p>
+<p>没曾想，当我回撤到入口时，随着商店街深处的暖色路灯慢慢亮起，忽有一群高中生骑着单车，欢声笑语间轻驰而过。这朝气蓬勃的景象，瞬间把整条街的落寞一扫而空。<br><img src="https://bobshen.com/upload/onomichi_students.jpg" alt="尾道本通商店街"></p>
+<p>第二天我又好好地逛了一下营业中的商店街，它也许不适合我，但一定很适合当地人。蔬果店、老式点心铺、百年澡堂、大众食堂，它不是为游客服务的网红商店街，却是充满生活气息的岁月见证者。</p>
+<h2 id="千光寺-猫之细道">千光寺、猫之细道</h2>
+<p>天亮之后，我选择先去千光寺。</p>
+<p>从山脚的缆车站坐上小缆车，缓缓爬升，尾道的全貌在脚下逐渐展开。数分钟后，便可抵达山顶，直接前往千光寺展望台。<br><img src="https://bobshen.com/upload/onomichi_view.jpg" alt="尾道展望台"></p>
+<p>这是一个造型十分好看的展望台。站在这里俯瞰尾道，整座小城如同一幅精心铺开的微缩模型：层层叠叠的屋瓦沿着山势蔓延，一直延伸到波光粼粼的濑户内海，几座小岛散落在远处。朱红色的千光寺本堂在绿荫中格外醒目。那一刻，忽然就明白了那些UP主所说的“安逸”从何而来——在这样的景色面前，心里很难再装下什么烦恼了。</p>
+<p>从展望台向下爬一段山路，即可达到千光寺。寺庙的本身并没有什么亮眼，记忆中只留下了风铃的轻声和鸣，以及不同于展望台视角的尾道全景。<br><img src="https://bobshen.com/upload/onomichi_bells.jpg" alt="尾道千光寺"></p>
+<p>再往下，便可选择经由猫之细道返回山脚。可惜的是，我去的那天温度太高，小猫都没有在营业，只能看着撸猫视频想象一下了。</p>
+<p>下山后在一个纪念品店买了点东西，沿着铁路走了一段，遇到了一位当地的老奶奶。用蹩脚的日语和她聊了聊，感叹了一下这夏天是如此热烈，彼此互道保重之后便分道扬镳了。</p>
+<h2 id="码头港口">码头港口</h2>
+<p>来到偌大无人的港口，这里有着前往对面向岛的渡轮。在一个遮阳伞下坐下，一边喝着冰镇饮料，一边吃着刚在特产店买的柠檬糖，刚才的疲劳和暑热消失殆尽。<br><img src="https://bobshen.com/upload/onomichi_port.jpg" alt="尾道码头"></p>
+<p>“我看到过海。我又能看到海了。” 望着林芙美子的诗句里提到的这片海，望着穿梭两岸的轮船，海水的气味变得浓郁起来。连接尾道和今治的自行车骑行圣地——“岛波海道”的起点就在附近。多年前，我曾在爱媛骑过一小段，如今造访海道的另一端，濑户内海依然用最晴朗的天空迎接我，想到这儿，心情好像变得更加舒畅了。<br><img src="https://bobshen.com/upload/onomichi_umi.jpg" alt="尾道的街"></p>
+<h2 id="尾道散策">尾道散策</h2>
+<p>之后的时间，我完全交给了漫无目的地漫步。之所以不再赶场去任何其他景点，是因为我知道这个小城的底色是悠闲。<br><img src="https://bobshen.com/upload/onomichi_bike.jpg" alt="尾道骑行者"></p>
+<p>悄悄“尾随”骑行者，去看看将酒店、咖啡店、骑行装备商店融为一体的U2 Cycle Hotel；沿着铁路慢行，在道口观望疾驰而过的火车；在尾道站稍作停留，喝一杯美式。一个下午居然就这么不自觉地过去了。<br><img src="https://bobshen.com/upload/onomichi_train.jpg" alt="尾道火车"></p>
+<p>我忽然觉得，那些视频“种草”并没有夸张。它没有惊心动魄的景点，它的好，就在于把“日常”过成了一种风景——一种缓慢、清晰、触手可及的风景。这大概就是让人想“在这里住上一星期”的全部理由。<br><img src="https://bobshen.com/upload/onomichi_mukaishima.jpg" alt="尾道向岛"></p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Sun, 01 Mar 2026 11:00:19 +0800</pubDate>
+      
+      <category>旅行</category>
+      
+      <category>日本</category>
+      
+      <category>广岛县</category>
+      
+    </item>
+    
+    <item>
+      <title>飞牛Nas系统体验</title>
+      <link>https://bobshen.com/%E9%9A%8F%E5%BF%83%E6%B5%8B/fnos/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E9%9A%8F%E5%BF%83%E6%B5%8B/fnos/</guid>
+      <description>fnOS
+为了应对家庭轻度的Nas和软路由需求，我测试过许多方案，包括成品的轻量级Nas、PVE all-in-one+OpenMediaVault+Openwrt、闲置的MacBook Air等等。而先前被我装上黑苹果用了一年的Nuc也经过了all-in-one小主机和x86机顶盒等多次变身，最终长期闲置。
+
+直到飞牛NAS系统的横空出世并在b站一炮而红，我的家庭Nas和Nuc终于找到了正确的归宿。安装部署至今，已经稳定运行了数月，值得记录一番。
+
+硬件
+这套系统的核心仍然是从黑苹果上退役下来的Nuc8i5，装了16g的内存，内置一块SSD（系统盘）和一块M.2，外接一块SSD硬盘，总共12...</description>
+      
+      <content:encoded><![CDATA[
+        <p><img src="https://bobshen.com/upload/banner_home_1.png" alt="fnOS"><br>为了应对家庭轻度的Nas和软路由需求，我测试过许多方案，包括成品的轻量级Nas、PVE all-in-one+OpenMediaVault+Openwrt、闲置的MacBook Air等等。而先前被我装上黑苹果用了一年的Nuc也经过了all-in-one小主机和x86机顶盒等多次变身，最终长期闲置。</p>
+<p>直到飞牛NAS系统的横空出世并在b站一炮而红，我的家庭Nas和Nuc终于找到了正确的归宿。安装部署至今，已经稳定运行了数月，值得记录一番。</p>
+<h3 id="硬件">硬件</h3>
+<p>这套系统的核心仍然是从黑苹果上退役下来的Nuc8i5，装了16g的内存，内置一块SSD（系统盘）和一块M.2，外接一块SSD硬盘，总共128G+4T全闪储存空间，按目前的用量来看绰绰有余。配置了一张2.5G USB网卡与路由器连接，需要时也可通过雷电网桥连接MacBook。</p>
+<h3 id="系统">系统</h3>
+<p>fnOS的优点是不挑硬件，安装便捷，功能相对完善，使用上手快门槛低，自带内网穿透，以及—— 完全免费。</p>
+<p><strong>飞牛影视</strong>作为其杀手锏，解决了我家两个android机顶盒+一台Apple TV+各色移动设备的看片需求。相比之前文件服务器+SMB的解决方案，飞牛影视的电视端操作更方便，海报墙更美观，刮削更智能，爱看韩剧的夫人对此赞不绝口。</p>
+<p>通过<strong>相册</strong>同步功能，我的iPhone相册和照相机的储存卡都可以妥善备份。而且新加入的AI功能让查找特定的照片也更方便了。</p>
+<p>我在<strong>虚拟机</strong>里安装了iStoreOS，运行OpenClash，作为旁路由使用。Nuc在充当软路由时无疑是性能过剩的。配合中兴主路由器的特色功能，可以在主路由的管理界面里就将特定设备的网关指派为旁路由，设备本身无需做任何设置。</p>
+<h3 id="展望">展望</h3>
+<p>目前我对这套系统非常满意，不过Nuc毕竟是多年前的产品了，每次听到风扇的声音总会有一些小心思：是不是需要更新的小主机？或者跟风入一台mac mini（甚至我测试了用UTM虚拟机装了fnOS作为可行性验证，系统跑起来是完全没有问题的）？毕竟常言道，折腾Nas也是中年男人的乐趣之一。</p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Sat, 05 Apr 2025 10:00:00 +0800</pubDate>
+      
+      <category>飞牛</category>
+      
+      <category>nuc</category>
+      
+    </item>
+    
+    <item>
+      <title>轨迹也是一种习惯了</title>
+      <link>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/falcom-kiseki/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/falcom-kiseki/</guid>
+      <description>轨迹全家福
+
+我不是一个游戏爱好者，玩起游戏来技术也很差。但是Falcom的英雄传说·轨迹系列却是我的心头好。从《空之轨迹FC》入坑到最新的《界之轨迹》，设备也从PC开始一路升级到PS5。甚至可以说，买PlayStation的原因就是为了第一时间玩到轨迹的新作。去年又在Switch上把之前入手数字版的旧作全部转化为了NS版，形成了一个小小的收藏。(唯一的遗憾是空轨没有NS改，但很快就有重制版了，小小地期待一下吧。)
+
+轨迹算是一个纯粉丝向的系列。每一部之间都有盘根错节的设定和剧情上的羁绊，加上熟人社交圈一般的人物关系，发展至今甚至有一点积重难返的意味，使得中途入坑的难度巨大。该系列的缺点也很多...</description>
+      
+      <content:encoded><![CDATA[
+        <p><img src="https://bobshen.com/upload/IMG_3702.jpg" alt="轨迹全家福"></p>
+<p>我不是一个游戏爱好者，玩起游戏来技术也很差。但是Falcom的英雄传说·轨迹系列却是我的心头好。从《空之轨迹FC》入坑到最新的《界之轨迹》，设备也从PC开始一路升级到PS5。甚至可以说，买PlayStation的原因就是为了第一时间玩到轨迹的新作。去年又在Switch上把之前入手数字版的旧作全部转化为了NS版，形成了一个小小的收藏。(唯一的遗憾是空轨没有NS改，但很快就有重制版了，小小地期待一下吧。)</p>
+<p>轨迹算是一个纯粉丝向的系列。每一部之间都有盘根错节的设定和剧情上的羁绊，加上熟人社交圈一般的人物关系，发展至今甚至有一点积重难返的意味，使得中途入坑的难度巨大。<!--more-->该系列的缺点也很多，比如过于套路化的剧本，由于资金有限而明显落后于时代的画面表现，玩法系统上的守旧导致推图过程有些乏味等等。不过，轨迹系列离“大作”两个字很远，反而成就了它在我心中最大的优点：真正的零负担游戏。不用担心因为迷路而卡关，不用担心手残带来的挫败感，也不用担心突然来个老登恶臭剧情恶心到自己。虽然《异度神剑》也是我很喜欢的JRPG，但它的系统设计过于复杂，以至于玩起来身心负担很重。</p>
+<p>轨迹的世界观很纯粹，甚至可以说有一点纯真 —— 但这种纯真挺好的。这个世界已经破破烂烂，如果在塞姆利亚大陆上能暂时寻得久违的热血与感动，何尝不是一种幸运呢。在波谲云诡的政治斗争下，总有一群试图改变现状的热血青年打破现状，用略显幼稚的理想主义击溃笼罩在这片土地上的战争阴霾。这也是一种成年人的童话吧。</p>
+<p>轨迹里的人物群像刻画虽然难免重复和鸡肋的设定，但总体是非常成功的。当空零碧闪的主角团齐聚一堂的时候，在组建主力团队时会有一种很难取舍的痛苦。每一个人物我都很喜欢，每一个角色都性格鲜明，谁放到后宫都是那么可惜。</p>
+<p>谨以此文感谢法社十余年来的陪伴，并期待早日入手空轨重制版。</p>
+<p><img src="https://bobshen.com/upload/20201014125713.jpg" alt="创之轨迹全员截图"></p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Fri, 21 Mar 2025 14:44:17 +0800</pubDate>
+      
+      <category>游戏</category>
+      
+    </item>
+    
+    <item>
+      <title>macOS疑难杂症速查笔记</title>
+      <link>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/macos-tips/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/macos-tips/</guid>
+      <description>macOS
+作为macOS十年老用户，以下这些疑难杂症处理方法本来只是个人的备忘录，现在打算把它们存在一篇笔记里便于查看。
+
+解决Mac安装软件的“已损坏，无法打开。 您应该将它移到废纸篓”问题
+原文链接：https://zhuanlan.zhihu.com/p/135948430
+Step 1: 打开允许“任何来源”的程序
+`
+sudo spctl  --master-disable
+`
+然后在设置中设置允许“任何来源”
+
+Step 2（如Step 1无效）：删除隔离附加信息
+`
+sudo xattr -r -d com.apple.quarantine /Applications/应用名称...</description>
+      
+      <content:encoded><![CDATA[
+        <p><img src="https://bobshen.com/upload/macOS.png" alt="macOS"><br>作为macOS十年老用户，以下这些疑难杂症处理方法本来只是个人的备忘录，现在打算把它们存在一篇笔记里便于查看。</p>
+<h3 id="解决mac安装软件的-已损坏-无法打开-您应该将它移到废纸篓-问题">解决Mac安装软件的“已损坏，无法打开。 您应该将它移到废纸篓”问题</h3>
+<p>原文链接：<a href="https://zhuanlan.zhihu.com/p/135948430">https://zhuanlan.zhihu.com/p/135948430</a><br><strong>Step 1: 打开允许“任何来源”的程序</strong></p>
+<pre><code>sudo spctl  --master-disable
+</code></pre>
+<p>然后在设置中设置允许“任何来源”</p>
+<p><strong>Step 2（如Step 1无效）：删除隔离附加信息</strong></p>
+<pre><code>sudo xattr -r -d com.apple.quarantine /Applications/应用名称.app
+</code></pre>
+<!--more-->
+<h3 id="删除mac启动台中的无效图标">删除mac启动台中的无效图标</h3>
+<p>原文链接：<a href="https://cloud.tencent.com/developer/article/1918385">https://cloud.tencent.com/developer/article/1918385</a></p>
+<pre><code>defaults write com.apple.dock ResetLaunchPad -bool true
+killall Dock
+</code></pre>
+<p>若不奏效，则</p>
+<blockquote>
+<p>打开访达，按下快捷键「commond」+「shift」+「H」，之后页面会自动跳转到用户的主页。打开「应用程序文件夹」，里面的都是launchpad的内容，找到你要删除的目标将其删除即可</p>
+</blockquote>
+<h3 id="用applescript一次性更新所有屏幕的壁纸">用AppleScript一次性更新所有屏幕的壁纸</h3>
+<p>原文链接：<a href="https://apple.stackexchange.com/questions/141834/applescript-to-change-desktop-image-on-all-monitors">https://apple.stackexchange.com/questions/141834/applescript-to-change-desktop-image-on-all-monitors</a></p>
+<pre><code>tell application &quot;System Events&quot; to tell every desktop to set picture to &quot;path/to/picture.png&quot;
+</code></pre>
+<p>用命令行设置壁纸：</p>
+<pre><code>osascript -e &#39;tell application &quot;Finder&quot; to set desktop picture to POSIX file &quot;/path/to/picture.jpg&quot;&#39;
+</code></pre>
+<h3 id="禁止macos在nas随地拉屎-写入-ds-store文件">禁止macOS在NAS随地拉屎（写入.DS_Store文件）</h3>
+<p>原文链接1：<a href="https://support.apple.com/en-us/102064">https://support.apple.com/en-us/102064</a><br>原文链接2：<a href="https://discussionschinese.apple.com/thread/250178280?sortBy=rank">https://discussionschinese.apple.com/thread/250178280?sortBy=rank</a></p>
+<pre><code>defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+</code></pre>
+<p>在移动硬盘中删除屎以及其他垃圾：</p>
+<pre><code>find /Volumes/&lt;your-USB-volume-name&gt; -name ._* -o -name .DS_Store -type f -delete
+rm -rf /Volumes/&lt;your-USB-volume-name&gt;/.{,_.}{fseventsd,Spotlight-V*,Trashes}
+</code></pre>
+<p>（持续更新）</p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Tue, 18 Mar 2025 09:57:05 +0800</pubDate>
+      
+      <category>macOS</category>
+      
+    </item>
+    
+    <item>
+      <title>日旅集 - EP2：箱根</title>
+      <link>https://bobshen.com/%E6%B8%B8%E8%AE%B0/hakone/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E6%B8%B8%E8%AE%B0/hakone/</guid>
+      <description>第二篇，讲讲神奈川县的另一个热门目的地——箱根。
+
+Hakone Title
+
+&gt;箱根（はこね，Hakone）位于日本神奈川县，以温泉、自然景观和富士山美景闻名。拥有大涌谷、芦之湖、箱根神社等景点，是东京附近的著名旅游胜地。（简介来自DeepSeek）
+
+这座温泉之乡以其火山地貌、静谧湖泊与艺术气息吸引着各方旅人。说到箱根，我发现它神奇地兼具交通不便和交通便利两个属性。说它不便，是因为游览地分散在山间，去遍所有景点需要在火车、登山电车、缆车、巴士中切换。说它便利，只需在小田急的游客中心买一张箱根周游券就能无限乘坐所有公共交通，而且整个游览线路可以连成一个环，时间安排上也毫无困难。
+
+湖光山影
+...</description>
+      
+      <content:encoded><![CDATA[
+        <p>第二篇，讲讲神奈川县的另一个热门目的地——箱根。</p>
+<p><img src="https://bobshen.com/upload/hakone.jpg" alt="Hakone Title"></p>
+<blockquote>
+<p>箱根（はこね，Hakone）位于日本神奈川县，以温泉、自然景观和富士山美景闻名。拥有大涌谷、芦之湖、箱根神社等景点，是东京附近的著名旅游胜地。（简介来自DeepSeek）</p>
+</blockquote>
+<p>这座温泉之乡以其火山地貌、静谧湖泊与艺术气息吸引着各方旅人。说到箱根，我发现它神奇地兼具交通不便和交通便利两个属性。说它不便，是因为游览地分散在山间，去遍所有景点需要在火车、登山电车、缆车、巴士中切换。说它便利，只需在小田急的游客中心买一张箱根周游券就能无限乘坐所有公共交通，而且整个游览线路可以连成一个环，时间安排上也毫无困难。</p>
+<h2 id="湖光山影">湖光山影</h2>
+<p>旅程从元箱根港开始。从巴士上一下车，目光就再也没离开过芦之湖。因火山活动而形成的湖泊位于群山之间，湖水湛蓝，湖上复古的海盗船来来往往。晴空之下，远处的富士山若隐若现，湖畔箱根神社的红色鸟居更是抢眼。可以到神社先转上一圈，鸟居前的经典机位需要排队。<!--more--><br><img src="https://bobshen.com/upload/luzhihu.jpeg" alt="Hakone"></p>
+<p>海盗船不仅是一个观光设施，也是重要的交通工具。开船后就可以在甲板上寻找与富士山合影的好位置了。靠岸后也不必走回头路，可以直接在桃源台换乘缆车，前往大涌谷。</p>
+<p>大涌谷让人印象深刻的是黑色的山峦、不断飘出的白烟，以及浓厚但不刺鼻的硫磺味。所谓大涌谷的名产，是利用地热煮熟的黑鸡蛋。我去的时候运气不错，目睹了富士山和缆车同框的壮观景象。<br><img src="https://bobshen.com/upload/E2A1C2EC-1BEE-499A-9011-0EF5D30CB7E3_1_105_c.jpeg" alt="Rope railway and Mount Fuji"></p>
+<p>从大涌谷到达早云山，可以逛逛“cu-mo箱根”商场，顶楼有足汤和展望台。从早云山返回强罗需要换乘登山电车，车身是倾斜的，如同移动的阶梯一般。<br><img src="https://bobshen.com/upload/D20A1F04-7A52-4614-896A-9AEB498CCE9A_1_105_c.jpeg" alt="Rope railway"></p>
+<h2 id="艺术气质">艺术气质</h2>
+<p>箱根的艺术气息同样令人沉醉。雕刻之森美术馆以自然为展厅，毕加索等大师的雕塑散落在草坪与林间。玻璃之森美术馆则如童话世界，展品很精致。但我觉得更值得一去的是Pola美术馆。</p>
+<p>从强罗到Pola是有免费接驳车的。整个美术馆本体不算太大，但参观者不多，可以不受干扰地观赏莫奈、梵高、毕加索…… 可看的藏品着实不少。美术馆外的森林游步道里隐藏着不少奇特的雕塑作品，值得特地巡游一番。<br><img src="https://bobshen.com/upload/1C38E85F-FF9C-4184-80D3-7186A7C5A35F_1_102_o.jpeg" alt="Pola"></p>
+<p>如果再到宫之下区域走走，就会更加理解：箱根不仅仅是温泉。你可以刻意地远离温泉街的喧嚣，慢慢走，慢慢感受街景和建筑。<br><img src="https://bobshen.com/upload/miyanoshita.jpeg" alt="Miyanoshita"></p>
+<h2 id="结语">结语</h2>
+<p>箱根之美，在于自然与人文的融合共生。火山赋予它地热与湖泊，历史沉淀出神社与古道，艺术则为其注入灵魂。无论是追逐富士山的轮廓，还是沉浸于温泉的慰藉，这座小城总能用不同的方式，疗愈每一位过客的身心。</p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Mon, 03 Mar 2025 11:00:19 +0800</pubDate>
+      
+      <category>旅行</category>
+      
+      <category>日本</category>
+      
+      <category>神奈川县</category>
+      
+    </item>
+    
+    <item>
+      <title>日旅集 - EP1：镰仓</title>
+      <link>https://bobshen.com/%E6%B8%B8%E8%AE%B0/kamakura/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E6%B8%B8%E8%AE%B0/kamakura/</guid>
+      <description>开一个新坑，也可能是一个天坑。总结一下在霓虹国各地的旅行感受，顺手整理一下照片。去过的地方很多，慢慢更。第一篇就从最值得一去的东京周边景点 —— 镰仓开始吧。
+
+Kamakura Title
+
+&gt;鎌倉（かまくら，Kamakura）位于神奈川县，三面环山一面靠海，距东京约50公里。作为日本首个武家政权所在地，保存着鹤冈八幡宫、建长寺等历史遗迹。(简介来自DeepSeek)
+
+前言
+每次到东京，都要想办法留一些时光给镰仓。坐上横须贺线，一个小时左右便能到达镰仓站。在那里买一张江之电一日券，搭上绿皮列车，我们的镰仓之旅就此正式展开。
+
+八年前的清明假期，第一次去感受日本的樱花季，从此就邂逅了镰仓，这...</description>
+      
+      <content:encoded><![CDATA[
+        <p>开一个新坑，也可能是一个天坑。总结一下在霓虹国各地的旅行感受，顺手整理一下照片。去过的地方很多，慢慢更。第一篇就从最值得一去的东京周边景点 —— 镰仓开始吧。</p>
+<p><img src="https://bobshen.com/upload/kamakura.jpg" alt="Kamakura Title"></p>
+<blockquote>
+<p>鎌倉（かまくら，Kamakura）位于神奈川县，三面环山一面靠海，距东京约50公里。作为日本首个武家政权所在地，保存着鹤冈八幡宫、建长寺等历史遗迹。(简介来自DeepSeek)</p>
+</blockquote>
+<h2 id="前言">前言</h2>
+<p>每次到东京，都要想办法留一些时光给镰仓。坐上横须贺线，一个小时左右便能到达镰仓站。在那里买一张江之电一日券，搭上绿皮列车，我们的镰仓之旅就此正式展开。</p>
+<p>八年前的清明假期，第一次去感受日本的樱花季，从此就邂逅了镰仓，这座我一次次前往的城市。随着电车“叮叮”地摩擦铁道，紧贴着民居一路飞驰，游客可以随时上下车，一路打卡经典的观景点。<!--more--><br><img src="https://j.bobshen.com/photo/p26.jpg" alt="镰仓江之电"></p>
+<p>镰仓绝对不缺纷至沓来的游客。这座依山傍海的古都，在东京都市圈的边缘静静生长，湘南的海岸造就了日剧、动漫中屡屡描绘的场景。镰仓的身上有很多标签，我从中选择的是：慢时光、海浪声、看花人，也是我每次归来都仍然念念不忘的原因。</p>
+<h2 id="慢时光">慢时光</h2>
+<p>找一家面朝大海的咖啡店或者餐厅（比如七里滨的 Bills），对着湘南的海平面发发呆，让时间慢下来，慢到游客的带来的喧嚣仿佛消失不见，慢到足够让一片片樱花落在肩头。</p>
+<p>镰仓其实不太适合一日游，毕竟光是从长谷站晃悠走到镰仓大佛就要半小时，而这只是那么多景点中最热门的一个而已。除非只是想在“高校前”拍个照就走，否则最好还是住一晚。可以选择江之电终点站藤泽（Fujisawa）更经济合算的酒店，也可以选择海岸线上任何一站周边的民宿。</p>
+<h2 id="海浪声">海浪声</h2>
+<p>镰仓高校前的铁轨旁永远簇拥着举着相机的人群，那个樱木花道与赤木晴子隔轨相望的经典场景，每天都在《直到世界尽头》的旋律里上演着。但是我十分推荐你从这一站顺着阶梯走下去，下到沙滩上，去看海。</p>
+<p>海浪声其实是镰仓永恒的底色，海面上常年浮动着的是各种颜色的冲浪板。当然对于游客而言，如果老天给面子，那么在你的镜头下，浪尖上的少年将能与巍峨的富士山雪顶遥遥相对。要是天气不给力的话也无妨，换个视角，总能让江之岛的轮廓入画。<br><img src="https://bobshen.com/upload/IMG_5406.jpg" alt="湘南海岸"></p>
+<h2 id="看花人">看花人</h2>
+<p>镰仓不是樱花闻名的地方。但有幸数次在三月末四月初来到这儿，我还是能感受到樱花季的浪漫。长谷寺、鹤冈八幡宫、江之电沿线的铁道旁，其实都很容易拍到樱花飞舞的场面。在紫阳花盛开的季节，可能还要再来打卡一次才行。<br><img src="https://j.bobshen.com/photo/p2.jpg" alt="建长寺"></p>
+<h2 id="后记">后记</h2>
+<p>如果将记忆中的画面随机暂停，定格住的可能是高德院大佛底座的青苔，可能是车站前人们为栏杆上的铁小鸟手织的毛衣，可能是空无一人的极乐寺，也可能是空中列车的摇晃下有些害怕的心情。镰仓的妙处，也许就在这各种美好意境的交叠之中吧。<br><img src="https://bobshen.com/upload/IMG_5412.jpg" alt="江之岛站"></p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Fri, 28 Feb 2025 11:00:19 +0800</pubDate>
+      
+      <category>旅行</category>
+      
+      <category>日本</category>
+      
+      <category>神奈川县</category>
+      
+    </item>
+    
+    <item>
+      <title>新主页</title>
+      <link>https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/new-homepage/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/new-homepage/</guid>
+      <description>demonewhomepage.jpg
+
+在个人网站上，我真的已经懈怠太久了。兴许这几年和很多人一样，对web已经渐渐失去了热情吧。或是有了新的兴趣，或是为生活所累，已经很少怀有纯文字的表达欲了。但不管怎么说，还是把这个网站的首页装饰一下，算是尽量维持互联网上的个人形象吧。顺便对博客的主题也小修小补了一下，增加了深色模式等。至于这样能否重新拾起写博客的习惯，未置可否。（或者从来没有形成过习惯吧？）
+
+ps：上线前一查代码才发现，当时写这个blog生成程序的时候就预留了套用不同模板作为主页的功能，但时间一长我完全不记得了。...</description>
+      
+      <content:encoded><![CDATA[
+        <p><img src="https://bobshen.com/upload/iShot_2024-04-07_17.21.51.png" alt="demo_newhomepage.jpg"></p>
+<p>在个人网站上，我真的已经懈怠太久了。兴许这几年和很多人一样，对web已经渐渐失去了热情吧。或是有了新的兴趣，或是为生活所累，已经很少怀有纯文字的表达欲了。但不管怎么说，还是把这个网站的首页装饰一下，算是尽量维持互联网上的个人形象吧。顺便对博客的主题也小修小补了一下，增加了深色模式等。至于这样能否重新拾起写博客的习惯，未置可否。（或者从来没有形成过习惯吧？）</p>
+<p>ps：上线前一查代码才发现，当时写这个blog生成程序的时候就预留了套用不同模板作为主页的功能，但时间一长我完全不记得了。</p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Sun, 07 Apr 2024 17:51:20 +0800</pubDate>
+      
+      <category>主页</category>
+      
+    </item>
+    
+    <item>
+      <title>批量修改照片的拍摄位置</title>
+      <link>https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/photo-gps/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/photo-gps/</guid>
+      <description>去年，买了理光的GR3，带着去日本旅行的时候拍了好多照片，但是这些照片都没有记录GPS location。
+
+难受的是，iOS的相册给照片添加位置时只能输入国内地点（可能是国行调用高德地图的原因）。试了一堆app都不怎么好用，要么年久失修，要么调用的macOS自带地图依然只能查找国内地址，所以自己出手写了个小工具，用来批量修改Exif GPS并一键导出保存。
+
+放在这里了：https://bobshen.com/lab/photogps...</description>
+      
+      <content:encoded><![CDATA[
+        <p>去年，买了理光的GR3，带着去日本旅行的时候拍了好多照片，但是这些照片都没有记录GPS location。</p>
+<p>难受的是，iOS的相册给照片添加位置时只能输入国内地点（可能是国行调用高德地图的原因）。试了一堆app都不怎么好用，要么年久失修，要么调用的macOS自带地图依然只能查找国内地址，所以自己出手写了个小工具，用来批量修改Exif GPS并一键导出保存。</p>
+<p>放在这里了：<a href="https://bobshen.com/lab/photogps">https://bobshen.com/lab/photogps</a></p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Tue, 26 Mar 2024 15:56:00 +0800</pubDate>
+      
+      <category>照片</category>
+      
+      <category>小工具</category>
+      
+    </item>
+    
+    <item>
+      <title>Random Thoughts from a Shanghainese</title>
+      <link>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/shanghai-lockdown/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/shanghai-lockdown/</guid>
+      <description>Unlike many friends of mine who boast themselves as proud Shanghai citizens, I don’t have an unconditional affection to this city. Partly because I grew up in a suburban area where the downtown dialect wasn’t even my mother tongue. But I find Shanghai a lovable place for many reasons. The convenient...</description>
+      
+      <content:encoded><![CDATA[
+        <p>Unlike many friends of mine who boast themselves as proud Shanghai citizens, I don’t have an unconditional affection to this city. Partly because I grew up in a suburban area where the downtown dialect wasn’t even my mother tongue. But I find Shanghai a lovable place for many reasons. The convenient modern life, the efficient system, people’s autonomous adherence to rules — both legally and morally, and most importantly, the freedom that allows you to do almost anything making dreams come true.<!--more--></p>
+<p>Those are the merits that created this metropolitan mega city. Those are the merits that gave birth to the countless high-rises, gigantic elevated highways, ultra-long subways and many more miracles in this city.</p>
+<p>But it recently came to me that the most important merit, the so-called freedom, is no more than a well-observed but never openly elaborated “agreement” — between the people and the city governors. It is a balanced relationship that has been working effectively, until over three weeks ago. That balance has been preventing the governors from sorts of absurdities that harm the economic development, and forcing the authorities to work down-to-earth to serve the people and the market. It deprioritizes ideological problems, so that people from all over the world can devote themselves to their pursuit of wealth, self recognition, and eventually, better lives.</p>
+<p>That freedom is, however, illusive. Many foreigners say that they love Shanghai because it is different. Many locals say that they don’t want to work and live in Beijing because Shanghai is different. The reality: it isn’t.</p>
+<p>The freedom which makes the myth of a unique, westernized, open-minded Shanghai is only there because of the mercy of the top guys. It is not taken for granted. When something imminently subversive overrules the situation, everything else can be abandoned, at all cost.</p>
+<p>The epidemic control is not a scientific issue; it is a political movement to remove imminent threats. For that sake, the shining, magical and lovable metropolis in your heart is nothing but a phantom.</p>
+<p>Like the barren land left by a tide, what we have been seeing during the past weeks are the naked truth when all the untold rules, the seemingly existed freedom, are no longer there. What was shut down was not the public transportation, the business centers, the food courts and groceries. What was deprived was the core spirt, the bone and blood of the city.</p>
+<p>Hearing about the devastating tragedies these days, I started being shocked, angered and upset, but now only indifferent and ostrich-like. No matter how cruel it is, this is the reality, the elephant in the room. As an individual, the only thing you are requested is obedience.</p>
+<p>It is time to wake up from the Shanghai dream.</p>
+<p>Undoubtedly the lockdown will come to an end. But my hometown is never going to be the same as before. Ironically, it perhaps never changes, except for the way I feel and understand it. One day when I look again at the glittering lights in the nights, and smell the coffee in the air, I will always feel the pain.</p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Sat, 23 Apr 2022 23:00:00 +0800</pubDate>
+      
+      <category>上海</category>
+      
+    </item>
+    
+    <item>
+      <title>摒弃鄙视链：我为何选择了QQ音乐</title>
+      <link>https://bobshen.com/%E9%9A%8F%E5%BF%83%E6%B5%8B/music-app-of-choice/</link>
+      <guid isPermaLink="true">https://bobshen.com/%E9%9A%8F%E5%BF%83%E6%B5%8B/music-app-of-choice/</guid>
+      <description>A mobile phone with a music app opened.
+
+前言
+本世纪之初，在各种网站上下载免费的MP3，是获取数字音乐的主要方式。便携MP3播放器则让人们抛弃了walkman，完全拥抱了数字格式的音乐。
+
+时至今日，听歌已经完全成为了手机上一项基本的在线服务，似乎是再简单不过的一件事了。
+
+我本人从网易云音乐转向QQ音乐已经好几年了。本来一直用着挺顺畅，但前几个月Apple Music开始通过Shazam免费赠送会员，而我又被Spotify的颜值种了草，所以花了一些时间去尝试了这两个平台。
+
+出于可以预想的原因，网上一直存在着所谓音乐平台的鄙视链。比如，网易云音乐用户...</description>
+      
+      <content:encoded><![CDATA[
+        <p><img src="https://bobshen.com/upload/ZJNU4EnOSRbzpjl.jpg" alt="A mobile phone with a music app opened."></p>
+<h2 id="前言">前言</h2>
+<p>本世纪之初，在各种网站上下载免费的MP3，是获取数字音乐的主要方式。便携MP3播放器则让人们抛弃了walkman，完全拥抱了数字格式的音乐。</p>
+<p>时至今日，听歌已经完全成为了手机上一项基本的在线服务，似乎是再简单不过的一件事了。</p>
+<p>我本人从网易云音乐转向QQ音乐已经好几年了。本来一直用着挺顺畅，但前几个月Apple Music开始通过Shazam免费赠送会员，而我又被Spotify的颜值种了草，所以花了一些时间去尝试了这两个平台。</p>
+<p>出于可以预想的原因，网上一直存在着所谓音乐平台的鄙视链。比如，网易云音乐用户看不起QQ音乐和酷狗用户，而Spotify用户则站在鄙视链的顶端群嘲众人。这也是我想要尝试Apple Music和Spotify的理由之一吧。</p>
+<p>在经过了一个多月的尝试和考察后，我最终选择了继续留在QQ音乐。下面就从我个人的需求和app相应的契合度上，聊一聊做出这个选择的原因吧。</p>
+<h2 id="原因阐述">原因阐述</h2>
+<p>先概括一下本人对听歌app的需求。我听中文、英语和日语的流行音乐，年代和曲风上没有特定的偏好。然后，本次尝试的Apple Music为国区，Spotify为港区。</p>
+<p>在考察一款音乐app时，我是从下面几个角度着手的：完善的曲库、优秀的音质、出色的体验、附加价值。</p>
+<h3 id="曲库完善">曲库完善</h3>
+<p>这是最基础的硬性指标。没有哪一家app可以做到100%覆盖，但如果缺的歌太多就太煞风景了。在曲库方面，三家运营者作为财力雄厚的公司，不会做得非常差。但就我个人的听歌需求而言，QQ音乐是胜出的，尤其是中文和日语曲库。首先，中文歌方面，大量脱胎于音乐节目的Live表演只会出现在QQ音乐上。其次，就日语歌而言，我相信另两家在日区的曲库应是比较完善的，可是在国区和港区测试下来，其表现只能说差强人意。<!--more--></p>
+<p>在写这篇blog之前，这只是我粗略的感受，并没有经过仔细查证。为了写这篇文章，我选取了一些歌曲进行验证。</p>
+<p><img src="https://i.loli.net/2021/02/28/sJxeWAuzmpMh59l.jpg" alt=""></p>
+<p>QQ音乐的曲库之强，上到上古情歌，下到偶练网综，无所不包。但是，众所周知QQ音乐在版权上是有黑洞的，上表中的毛不易就是一例。所以始终需要一个备用的平台来补充曲库。我选择的是网易云音乐，因为淘宝88VIP赠送了会员。</p>
+<p>此外，曲库的完善不光是歌曲的全面，歌曲、歌词和歌手信息的精准也是基本功。Apple Music和Spotify对于CJK字符的信息整理和规范比较糟糕。中文和日语的歌手或歌曲名，有时是汉字，有时又是拼音或者罗马字。怎么说呢，有种老外就是“干不过”汉字的感觉。而QQ音乐则相对规范，甚至日语的歌手都有本名和假名双重标注。</p>
+<h3 id="音质">音质</h3>
+<p>要说最让人困惑的部分，那就是音质了。确切地说，令我感到困惑的是为什么Apple Music的音质那么糟糕。</p>
+<p>从参数上说，QQ Music和Spotify都提供高码率甚至无损的音频品质，但Apple Music仍然坚持256Kbps的AAC格式。照理说在AirPods Pro上应该是听不出差别的，可事实是，一耳朵就能听出高下。在一些配器较为复杂的歌曲上，Apple Music的表现就是有明显的毛刺，声音浑浊。虽说听感这件事是一个玄学，个人体会不同，但果子和别人的差距已经是木耳可闻。</p>
+<h3 id="便捷性与ux">便捷性与UX</h3>
+<p>这点上Apple Music占了很大的便宜。开通之后，HomePod终于不是一个懵懂的音痴，和绑定了QQ音乐的“小爱同学”一样能够点歌了。</p>
+<p>QQ音乐在界面上最为复杂，但副作用就是多出了很多乱七八糟的东西。每次看到QQ音乐弹出“是否要订购专用流量包”的视觉污染提示框，都让人心烦。我完全理解为什么有人单纯因为界面的原因而选择了Spotify或者网易云。所以大部分时候，QQ音乐的正确用法就是让它在后台播放。</p>
+<p>Spotify是一个异类。在开会员之前和开会员之后可谓天壤之别。免费版的口播广告以及随机歌单，直接带来一个“负分滚粗”的体验。</p>
+<p>在这一部分，QQ音乐的用户体验是垫底的，但差距不大而且没有硬伤。</p>
+<h3 id="附加价值">附加价值</h3>
+<p>最终离不开QQ音乐的又一大原因，是它可以用来学外语歌。大部分外语歌的歌词都有翻译，有注音，甚至可以直接K歌。</p>
+<p>QQ音乐还有一些符合国人需求的特色功能，比如PC/MAC版在桌面和状态栏都可以显示卡拉OK效果的歌词；比如移动版在手机锁屏时也可以显示实时歌词（甚至在Apple Watch上也是可以看到的，因为它是通过不断修改歌手姓名这一骚操作来实现的）；再比如日语汉字在Windows版应用上可以直接标注假名等等。</p>
+<p>当然，这些只能称为附加价值。如果说有一天QQ音乐开窍了，要把那些乱七八糟的都砍掉，和Apple Music以及Spotify一样做一个纯粹的音乐app，因而需要把这些附加功能也一并删除的话，我还是会大力支持的。说到底，它只是一个听歌软件而已。</p>
+<h2 id="总结">总结</h2>
+<p>在一个多月的对比过程中，我也考察了其他体验。比如推荐歌曲的算法是否知心，4/5G网络下加载是否流畅，等等。Apple和Spotify的这些功能在短暂的试用中并没有明显地与QQ音乐拉开差距。于是，在春节前夕，我得出了继续使用QQ音乐，在试听期满后不再续费Apple Music的决定。</p>
+<p>最后说回鄙视链这个问题。我赞同，App也是有气质的。和国际范的Apple Music以及Spotify比起来，QQ音乐的气质确实更大众化。但我还是想说，听歌的时候没有人会始终盯着手机屏幕，更多的时候它都只是在后台播放而已。稳定、好听、歌全又不贵，难道不比所谓“高大上”更重要吗？</p>
+
+      ]]></content:encoded>
+      
+      <pubDate>Sun, 21 Feb 2021 15:55:00 +0800</pubDate>
+      
+      <category>QQ音乐</category>
+      
+      <category>Apple Music</category>
+      
+      <category>Spotify</category>
+      
+    </item>
+    
+  </channel>
+</rss>
