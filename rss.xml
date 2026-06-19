@@ -570,37 +570,30 @@ sudo xattr -r -d com.apple.quarantine /Applications/应用名称...</description
         <p><img src="https://bobshen.com/upload/macOS.png" alt="macOS"><br>作为macOS十年老用户，以下这些疑难杂症处理方法本来只是个人的备忘录，现在打算把它们存在一篇笔记里便于查看。</p>
 <h3 id="解决mac安装软件的-已损坏-无法打开-您应该将它移到废纸篓-问题">解决Mac安装软件的“已损坏，无法打开。 您应该将它移到废纸篓”问题</h3>
 <p>原文链接：<a href="https://zhuanlan.zhihu.com/p/135948430">https://zhuanlan.zhihu.com/p/135948430</a><br><strong>Step 1: 打开允许“任何来源”的程序</strong></p>
-<pre><code>sudo spctl  --master-disable
-</code></pre>
+<pre><code class="hljs language-plaintext">sudo spctl  --master-disable</code></pre>
 <p>然后在设置中设置允许“任何来源”</p>
 <p><strong>Step 2（如Step 1无效）：删除隔离附加信息</strong></p>
-<pre><code>sudo xattr -r -d com.apple.quarantine /Applications/应用名称.app
-</code></pre>
+<pre><code class="hljs language-plaintext">sudo xattr -r -d com.apple.quarantine /Applications/应用名称.app</code></pre>
 <!--more-->
 <h3 id="删除mac启动台中的无效图标">删除mac启动台中的无效图标</h3>
 <p>原文链接：<a href="https://cloud.tencent.com/developer/article/1918385">https://cloud.tencent.com/developer/article/1918385</a></p>
-<pre><code>defaults write com.apple.dock ResetLaunchPad -bool true
-killall Dock
-</code></pre>
+<pre><code class="hljs language-plaintext">defaults write com.apple.dock ResetLaunchPad -bool true
+killall Dock</code></pre>
 <p>若不奏效，则</p>
 <blockquote>
 <p>打开访达，按下快捷键「commond」+「shift」+「H」，之后页面会自动跳转到用户的主页。打开「应用程序文件夹」，里面的都是launchpad的内容，找到你要删除的目标将其删除即可</p>
 </blockquote>
 <h3 id="用applescript一次性更新所有屏幕的壁纸">用AppleScript一次性更新所有屏幕的壁纸</h3>
 <p>原文链接：<a href="https://apple.stackexchange.com/questions/141834/applescript-to-change-desktop-image-on-all-monitors">https://apple.stackexchange.com/questions/141834/applescript-to-change-desktop-image-on-all-monitors</a></p>
-<pre><code>tell application &quot;System Events&quot; to tell every desktop to set picture to &quot;path/to/picture.png&quot;
-</code></pre>
+<pre><code class="hljs language-plaintext">tell application &quot;System Events&quot; to tell every desktop to set picture to &quot;path/to/picture.png&quot;</code></pre>
 <p>用命令行设置壁纸：</p>
-<pre><code>osascript -e &#39;tell application &quot;Finder&quot; to set desktop picture to POSIX file &quot;/path/to/picture.jpg&quot;&#39;
-</code></pre>
+<pre><code class="hljs language-plaintext">osascript -e &#x27;tell application &quot;Finder&quot; to set desktop picture to POSIX file &quot;/path/to/picture.jpg&quot;&#x27;</code></pre>
 <h3 id="禁止macos在nas随地拉屎-写入-ds-store文件">禁止macOS在NAS随地拉屎（写入.DS_Store文件）</h3>
 <p>原文链接1：<a href="https://support.apple.com/en-us/102064">https://support.apple.com/en-us/102064</a><br>原文链接2：<a href="https://discussionschinese.apple.com/thread/250178280?sortBy=rank">https://discussionschinese.apple.com/thread/250178280?sortBy=rank</a></p>
-<pre><code>defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
-</code></pre>
+<pre><code class="hljs language-plaintext">defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE</code></pre>
 <p>在移动硬盘中删除屎以及其他垃圾：</p>
-<pre><code>find /Volumes/&lt;your-USB-volume-name&gt; -name ._* -o -name .DS_Store -type f -delete
-rm -rf /Volumes/&lt;your-USB-volume-name&gt;/.{,_.}{fseventsd,Spotlight-V*,Trashes}
-</code></pre>
+<pre><code class="hljs language-plaintext">find /Volumes/&lt;your-USB-volume-name&gt; -name ._* -o -name .DS_Store -type f -delete
+rm -rf /Volumes/&lt;your-USB-volume-name&gt;/.{,_.}{fseventsd,Spotlight-V*,Trashes}</code></pre>
 <p>（持续更新）</p>
 
       ]]></content:encoded>

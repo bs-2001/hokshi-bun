@@ -30,15 +30,9 @@
                 </nav>
 
                 <div class="header-actions">
-                    <div class="scheme-btn-wrapper">
-                        <button id="scheme-toggle" class="scheme-btn desktop-scheme-btn" aria-label="Toggle color scheme">
-                            <svg class="scheme-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
-                        </button>
-                        <div id="scheme-popup" class="scheme-popup">
-                            <div class="scheme-popup-title">配色方案</div>
-                            <div class="scheme-popup-grid" id="scheme-popup-grid"></div>
-                        </div>
-                    </div>
+                    <a href="/search/" class="search-btn" aria-label="搜索文章" title="搜索文章">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </a>
 
                     <button id="theme-toggle" class="theme-btn desktop-theme-btn" aria-label="切换暗色模式">
                         <svg class="icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.364l-.707-.707M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -245,6 +239,15 @@
                     <a href="/rss.xml" class="footer-rss" target="_blank" title="RSS Feed" aria-label="RSS Feed">
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 2a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
                     </a>
+                    <div class="scheme-btn-wrapper">
+                        <button id="scheme-toggle" class="scheme-btn footer-scheme-btn" aria-label="Toggle color scheme">
+                            <svg class="scheme-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                        </button>
+                        <div id="scheme-popup" class="scheme-popup">
+                            <div class="scheme-popup-title">配色方案</div>
+                            <div class="scheme-popup-grid" id="scheme-popup-grid"></div>
+                        </div>
+                    </div>
                     <button id="back-to-top" class="footer-top-btn" aria-label="Back to top" title="返回顶部">
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
                     </button>
@@ -275,13 +278,10 @@
                 <span class="drawer-btn-label">切换暗色模式</span>
             </button>
 
-            <button id="scheme-toggle-drawer" class="scheme-btn drawer-scheme-btn" aria-label="Toggle color scheme">
-                <svg class="scheme-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
-                <span class="drawer-btn-label">配色方案</span>
-            </button>
-            <div class="scheme-picker" id="scheme-picker">
-                <div class="scheme-picker-grid" id="scheme-picker-grid"></div>
-            </div>
+            <a href="/search/" class="drawer-search-btn" aria-label="搜索文章">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                <span class="drawer-btn-label">搜索文章</span>
+            </a>
         </div>
 
     </nav>

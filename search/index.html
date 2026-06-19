@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>上网，过去时 | Bob的小角落</title>
+    <title>搜索文章 | Bob的小角落</title>
     <link rel="stylesheet" href="/assets/scheme-green.css">
     <link rel="stylesheet" href="/assets/style.css">
 </head>
@@ -47,76 +47,75 @@
         <main id="main-content" class="main-content">
             
 
-<div class="post-with-toc" id="post-with-toc">
-  <article class="post-full">
-      <header class="post-full-header">
-          <h1 class="post-full-title">上网，过去时</h1>
-          <div class="post-meta">
-              <time datetime="Sat Nov 10 2007 14:47:53 GMT+0800 (China Standard Time)">November 10, 2007</time>
-              
-              <span class="meta-sep">•</span>
-              <span>5 分钟阅读</span>
-              <span class="meta-sep">•</span>
-              <a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD.html" class="post-cat">自言自语</a>
-          </div>
-          
-          <div class="post-tags">
-              
-              <a href="/tags/#%E7%BD%91%E4%BA%8B" class="tag-link">#网事</a>
-              
-          </div>
-      </header>
+<section class="section">
+  <div class="section-header">
+    <h1 class="section-title">搜索文章</h1>
+  </div>
 
-      <div id="post-content" class="post-content">
-          <p>今天在抽屉里整理出了一批“古董”——几张电话上网卡，应该有6、7年的历史了。记得当时市场上可以选择的上网卡种类非常丰富，为了试验出哪种卡的速度最快，买过各家公司的卡，不过大多都用完了就扔。当然，对于那段时期上网经历的记忆是不可能被扔掉的。至今回想起来，仍然历历在目。</p>
-<p>那时候拨号上网的费用大致是3-4元/小时，按照当时的物价，拉着小猫上网是有点小小奢侈的娱乐活动。因此上网的时候会很谨慎，严格控制好连接时间，绝对不会出现干连着网啥事都不做的情况。上网的时候也会分配好每次连接的时间，加上本人自控能力比较好，所以预先计划好一张卡用多久，就能用多久。</p>
-<p>那时候没有手机，一旦连上网就会占用电话线，虽然有时会耽误事，但颇有一种“闲人勿扰”的郑重其事感。</p>
-<p>那时候没有blog，为了分享一些我自己的爱好和想法，决定自己做网站，因此学了不少东西。Dreamweaver、FTP、图形处理以及HTML等乱七八糟的知识都是那个时候学会的。还记得和WYF一起去上海的某家网络公司，和他们的老总软磨硬泡了一个上午，以400人民币这一当时不可思议的低价注册了一个100M的虚拟主机外加两个不怎么好听的.com域名。<!--more--></p>
-<p>那时候没有BT和其他的P2P，下载速度只有可怜的5K。所以也养成了两个好习惯。一是下载有度：下载的东西肯定是经过细心挑选的，绝不会像现在这样，硬盘里堆了一堆下载完就忘了看的电影。二是用之有物：闲聊的时间很少，网游更是不可能，大部分时间都花在了寻找、阅读一些在传统媒介上无法获取的信息上。</p>
-<p>那时候网络只是生活中的配角，你可以大大方方地在个人资料里注明你的业余爱好是“上网”而不会显得土，你也可以花上十几元坐在上海书城二楼的Net Cafe里，边喝咖啡边打开Hotmail，你也可以花上6元左右的价格，买一本附带一张所有内容全都是从互联网上下载下来的光盘的网友杂志。</p>
-<p>才短短6-7年的工夫，我们的生活，我们的互联网就发生了天翻地覆的变化。网络不再是配角，它成为了工作的必需，甚至有时候左右着我们的精神与物质生活。</p>
-<p>弹指一挥间，上网的速度翻了20多倍，上网的时间翻了7倍有余，网上的信息量更是山洪爆发般猛增。但是很可惜，它不再像几年前那样纯粹与时尚了，很多时候，它带来的不是愉悦与轻松，而是负担、压力与空虚。</p>
-<p>谨以此文纪念逝去的部分青春，以及那份如今已经难觅的悠闲。</p>
+  <div class="search-box">
+    <input type="text" id="search-input" class="search-input"
+           placeholder="搜索文章..." autofocus autocomplete="off">
+  </div>
 
-      </div>
+  <div id="search-results" class="post-list"></div>
+</section>
 
-      <hr class="post-sep">
+<script>
+(function () {
+  var input = document.getElementById("search-input");
+  var results = document.getElementById("search-results");
+  var posts = [];
+  var sitePath = "";
+  var emptyHtml = '<p class="search-empty">没有找到文章</p>';
 
-      <nav class="post-nav">
-        <div class="post-nav-side">
-          
-            
-            
-              
-              <a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/rank-or-entertainment/" class="post-nav-link post-nav-prev">
-                <span class="post-nav-arrow">←</span>
-                <span class="post-nav-label">娱乐榜</span>
-              </a>
-            
-          
-        </div>
-        <div class="post-nav-side post-nav-right">
-          
-            
-            
-              
-              <a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/freelancer/" class="post-nav-link post-nav-next">
-                <span class="post-nav-label">告别蛰居</span>
-                <span class="post-nav-arrow">→</span>
-              </a>
-            
-          
-        </div>
-      </nav>
-  </article>
+  fetch(sitePath + "/search.json")
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      posts = data;
+      if (input.value) doSearch();
+    });
 
-  <nav id="toc-sidebar" class="toc-sidebar" aria-label="Table of Contents">
-    <div class="toc-sticky">
-      <div class="toc-heading">目录</div>
-      <div id="toc-list-wrap" class="toc-list-wrap"></div>
-    </div>
-  </nav>
-</div>
+  function doSearch() {
+    var q = input.value.trim().toLowerCase();
+    if (!q) { results.innerHTML = ""; return; }
+
+    var matched = posts.filter(function (p) {
+      return p.title.toLowerCase().indexOf(q) !== -1 ||
+        (p.desc && p.desc.toLowerCase().indexOf(q) !== -1) ||
+        p.tags.some(function (t) { return t.toLowerCase().indexOf(q) !== -1; }) ||
+        p.category.toLowerCase().indexOf(q) !== -1;
+    });
+
+    if (matched.length === 0) {
+      results.innerHTML = emptyHtml;
+      return;
+    }
+
+    results.innerHTML = matched.map(function (p) {
+      return '<article class="post-item">' +
+        '<h2 class="post-title"><a href="' + sitePath + '/' + enc(p.category) + '/' + enc(p.slug) + '/" class="post-link">' + esc(p.title) + '</a></h2>' +
+        '<div class="post-meta">' +
+          '<time>' + p.date + '</time>' +
+          '<span class="meta-sep">&bull;</span>' +
+          '<a href="' + sitePath + '/category/' + enc(p.category) + '.html" class="post-cat">' + p.category + '</a>' +
+        '</div>' +
+        (p.desc ? '<p class="post-desc">' + esc(p.desc) + '</p>' : '') +
+        '<div class="post-tags">' + p.tags.map(function (t) { return '<a href="' + sitePath + '/tags/#' + enc(t) + '" class="tag-link">#' + esc(t) + '</a>'; }).join("") + '</div>' +
+      '</article>';
+    }).join("");
+  }
+
+  function esc(s) {
+    return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function enc(s) {
+    return encodeURIComponent(s);
+  }
+
+  input.addEventListener("input", doSearch);
+})();
+</script>
 
 
         </main>

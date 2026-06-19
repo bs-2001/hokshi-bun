@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://bobshen.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://bobshen.com/archive/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://bobshen.com/tags/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://bobshen.com/category/%E5%B0%8F%E7%8E%A9%E6%84%8F.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/category/%E6%B8%B8%E8%AE%B0.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/category/%E9%9A%8F%E5%BF%83%E6%B5%8B.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://bobshen.com/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/compat-hexo-themes/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/developing-hokshi/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E6%B8%B8%E8%AE%B0/netsu-shibamata/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E6%B8%B8%E8%AE%B0/parks-in-tokyoto/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E6%B8%B8%E8%AE%B0/maiko-korakuen-gotokuji/</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E6%B8%B8%E8%AE%B0/amanohashidate-ine/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/grass-instinct/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E6%B8%B8%E8%AE%B0/miyajima/</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E6%B8%B8%E8%AE%B0/takayama-shirogawa/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E6%B8%B8%E8%AE%B0/takamatsu/</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E6%B8%B8%E8%AE%B0/onomichi/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E9%9A%8F%E5%BF%83%E6%B5%8B/fnos/</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/falcom-kiseki/</loc>
+    <lastmod>2025-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/macos-tips/</loc>
+    <lastmod>2025-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E6%B8%B8%E8%AE%B0/hakone/</loc>
+    <lastmod>2025-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E6%B8%B8%E8%AE%B0/kamakura/</loc>
+    <lastmod>2025-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/new-homepage/</loc>
+    <lastmod>2024-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E5%B0%8F%E7%8E%A9%E6%84%8F/photo-gps/</loc>
+    <lastmod>2024-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/shanghai-lockdown/</loc>
+    <lastmod>2022-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E9%9A%8F%E5%BF%83%E6%B5%8B/music-app-of-choice/</loc>
+    <lastmod>2021-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/nuc-catalina/</loc>
+    <lastmod>2019-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E9%9A%8F%E5%BF%83%E6%B5%8B/bo-e8/</loc>
+    <lastmod>2019-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/free-and-non-instrumental/</loc>
+    <lastmod>2019-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E6%B8%B8%E8%AE%B0/first-time-in-australia/</loc>
+    <lastmod>2018-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E6%B8%B8%E8%AE%B0/japan-why-you-should-go-there/</loc>
+    <lastmod>2018-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E9%9A%8F%E5%BF%83%E6%B5%8B/libratone-zipp-mini/</loc>
+    <lastmod>2016-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E9%9A%8F%E5%BF%83%E6%B5%8B/kindle-voyage/</loc>
+    <lastmod>2016-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/away-from-wechat-moments/</loc>
+    <lastmod>2016-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/no-baidu/</loc>
+    <lastmod>2016-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E6%B8%B8%E8%AE%B0/hongkong-first-impression/</loc>
+    <lastmod>2015-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/meipai/</loc>
+    <lastmod>2014-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/helloworld/</loc>
+    <lastmod>2014-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E9%9A%8F%E5%BF%83%E6%B5%8B/spark-3/</loc>
+    <lastmod>2012-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/shanghai-glass-museum/</loc>
+    <lastmod>2011-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/higashino-keigo/</loc>
+    <lastmod>2011-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/ie6/</loc>
+    <lastmod>2011-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/loveshanghai/</loc>
+    <lastmod>2009-12-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/rank-or-entertainment/</loc>
+    <lastmod>2009-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/net-experience-2000/</loc>
+    <lastmod>2007-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/freelancer/</loc>
+    <lastmod>2007-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/no-chinese-in-english/</loc>
+    <lastmod>2007-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/msn-china/</loc>
+    <lastmod>2005-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/fayewong-lyrics/</loc>
+    <lastmod>2003-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/about-waiting/</loc>
+    <lastmod>2003-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://bobshen.com/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/wang-wei/</loc>
+    <lastmod>2003-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+</urlset>

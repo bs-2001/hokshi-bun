@@ -176,6 +176,85 @@ html.dark .icon-moon { display: none; }
 .icon-sun { display: none; }
 .icon-moon { display: block; }
 
+/* --- Code Highlight Dark Mode Overrides --- */
+html.dark .hljs {
+  color: #c9d1d9;
+  background: #0d1117;
+}
+html.dark .hljs-doctag,
+html.dark .hljs-keyword,
+html.dark .hljs-meta .hljs-keyword,
+html.dark .hljs-template-tag,
+html.dark .hljs-template-variable,
+html.dark .hljs-type,
+html.dark .hljs-variable.language_ {
+  color: #ff7b72;
+}
+html.dark .hljs-title,
+html.dark .hljs-title.class_,
+html.dark .hljs-title.class_.inherited__,
+html.dark .hljs-title.function_ {
+  color: #d2a8ff;
+}
+html.dark .hljs-attr,
+html.dark .hljs-attribute,
+html.dark .hljs-literal,
+html.dark .hljs-meta,
+html.dark .hljs-number,
+html.dark .hljs-operator,
+html.dark .hljs-selector-attr,
+html.dark .hljs-selector-class,
+html.dark .hljs-selector-id,
+html.dark .hljs-variable {
+  color: #79c0ff;
+}
+html.dark .hljs-string,
+html.dark .hljs-meta .hljs-string,
+html.dark .hljs-regexp {
+  color: #a5d6ff;
+}
+html.dark .hljs-built_in,
+html.dark .hljs-symbol {
+  color: #ffa657;
+}
+html.dark .hljs-comment,
+html.dark .hljs-code,
+html.dark .hljs-formula {
+  color: #8b949e;
+}
+html.dark .hljs-name,
+html.dark .hljs-quote,
+html.dark .hljs-selector-tag,
+html.dark .hljs-selector-pseudo {
+  color: #7ee787;
+}
+html.dark .hljs-subst {
+  color: #c9d1d9;
+}
+html.dark .hljs-section {
+  color: #1f6feb;
+  font-weight: 700;
+}
+html.dark .hljs-bullet {
+  color: #f2cc60;
+}
+html.dark .hljs-emphasis {
+  color: #c9d1d9;
+  font-style: italic;
+}
+html.dark .hljs-strong {
+  color: #c9d1d9;
+  font-weight: 700;
+}
+html.dark .hljs-addition {
+  color: #aff5b4;
+  background-color: #033a16;
+}
+html.dark .hljs-deletion {
+  color: #ffdcd7;
+  background-color: #67060c;
+}
+
 /* --- Scheme Toggle --- */
 .scheme-btn {
   background: none;
@@ -196,13 +275,31 @@ html.dark .icon-moon { display: none; }
   height: 1.125rem;
 }
 
-/* --- Scheme Popup (desktop dropdown) --- */
+/* --- Search Button (header) --- */
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+.search-btn:hover {
+  color: var(--accent);
+}
+
+/* --- Scheme Popup (footer dropdown, opens upward) --- */
 .scheme-popup {
   display: none;
   position: absolute;
-  top: 100%;
+  bottom: 100%;
+  top: auto;
   right: 0;
-  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   min-width: 180px;
   background: var(--bg);
   border: 1px solid var(--line);
@@ -460,6 +557,34 @@ html.dark .icon-moon { display: none; }
   margin-bottom: 0.5rem;
 }
 
+/* --- Search --- */
+.search-box {
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: var(--accent);
+}
+
+.search-empty {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2rem 0;
+  font-size: 0.9375rem;
+}
+
 .post-tags {
   display: flex;
   flex-wrap: wrap;
@@ -702,6 +827,11 @@ html.dark .icon-moon { display: none; }
   background: var(--line);
   padding: 0.125rem 0.375rem;
   border-radius: 4px;
+}
+
+.post-content pre:has(code.hljs) {
+  background: none;
+  padding: 0;
 }
 
 .post-content pre {
@@ -1111,7 +1241,7 @@ html.dark .icon-moon { display: none; }
   font-size: 0.9375rem;
 }
 
-.drawer-scheme-btn {
+.drawer-search-btn {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -1125,12 +1255,13 @@ html.dark .icon-moon { display: none; }
   transition: color 0.2s;
   background: none;
   border: none;
+  text-decoration: none;
   flex-shrink: 0;
 }
-.drawer-scheme-btn:hover {
+.drawer-search-btn:hover {
   color: var(--accent);
 }
-.drawer-scheme-btn svg {
+.drawer-search-btn svg {
   width: 1.25rem;
   height: 1.25rem;
 }
@@ -1217,7 +1348,8 @@ html.dark .icon-moon { display: none; }
 
 @media (max-width: 768px) {
   .desktop-theme-btn,
-  .desktop-scheme-btn {
+  .desktop-scheme-btn,
+  .search-btn {
     display: none;
   }
   .layout-container {
