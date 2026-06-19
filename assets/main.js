@@ -16,17 +16,10 @@
     { id: "coffee", label: "Coffee", accent: "#7c4a28", bg: "#faf3eb", darkBg: "#1c130b" }
   ];
 
-  // --- Highlight current nav link ---
-  var currentPath = location.pathname.replace(/\/$/, '');
-  document.querySelectorAll('.nav-link').forEach(function (link) {
-    var linkPath = link.getAttribute('href').replace(/\/$/, '');
-    if (linkPath === currentPath || (currentPath.startsWith(linkPath) && linkPath !== '')) {
-      link.classList.add('nav-current');
-    }
-  });
-  if (!document.querySelector('.nav-link.nav-current')) {
-    var firstNav = document.querySelector('.nav-link');
-    if (firstNav) firstNav.classList.add('nav-current');
+  // --- Nav active fallback ---
+  if (!document.querySelector('.nav-link.active')) {
+    var homeLink = document.querySelector('.nav-link[href$="/"]') || document.querySelector('.nav-link');
+    if (homeLink) homeLink.classList.add('active');
   }
 
   // --- Dark Mode ---
@@ -216,6 +209,16 @@
       link.addEventListener('click', closeDrawer);
     });
   }
+
+  // --- htmx: scroll to top after pagination swap ---
+  document.body.addEventListener('htmx:afterSettle', function () {
+    if (document.getElementById('post-list-wrap')) {
+      setTimeout(function () {
+        var btn = document.getElementById('back-to-top');
+        if (btn) btn.click();
+      }, 300);
+    }
+  });
 
   // --- Back to top ---
   var backBtn = document.getElementById('back-to-top');
