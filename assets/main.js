@@ -30,9 +30,44 @@
 
   // --- Nav active fallback ---
   if (!document.querySelector(".nav-link.active")) {
-    var homeLink =
-      document.querySelector('.nav-link[href$="/"]') || document.querySelector(".nav-link");
-    if (homeLink) homeLink.classList.add("active");
+    var currentPath = location.pathname;
+    var found = false;
+
+    document.querySelectorAll(".nav-link").forEach(function (link) {
+      if (found) return;
+      var href = link.getAttribute("href");
+      if (!href) return;
+
+      // Exact match
+      if (href === currentPath) {
+        found = true;
+        link.classList.add("active");
+        return;
+      }
+
+      // Home: /index.html is equivalent to /
+      if (
+        href === "/" &&
+        (currentPath === "/index.html" || currentPath === "/")
+      ) {
+        found = true;
+        link.classList.add("active");
+        return;
+      }
+
+      // Posts listing: /pages/<n>.html matches any page number
+      if (/\/pages\/\d+\.html$/.test(href) && /\/pages\/\d+\.html$/.test(currentPath)) {
+        found = true;
+        link.classList.add("active");
+      }
+    });
+
+    // Still nothing — highlight home as ultimate fallback
+    if (!found) {
+      var homeLink =
+        document.querySelector('.nav-link[href$="/"]') || document.querySelector(".nav-link");
+      if (homeLink) homeLink.classList.add("active");
+    }
   }
 
   // --- Dark Mode ---
