@@ -1,5 +1,5 @@
 /* ============================================
-   Default Theme — Interactions
+   Ink Theme — Interactions
    ============================================ */
 
 (function () {
@@ -17,17 +17,6 @@
     document.head.appendChild(link);
   })();
 
-  // --- Available color schemes (extend by adding new names & preview colors) ---
-  var SCHEMES = [
-    { id: "green", label: "Green", accent: "#04ca15", bg: "#edf2e6", darkBg: "#1a2e1a" },
-    { id: "red", label: "Red", accent: "#ca3e04", bg: "#fefaf8", darkBg: "#2e1a1a" },
-    { id: "blue", label: "Blue", accent: "#2563eb", bg: "#eef2ff", darkBg: "#0f172a" },
-    { id: "sand", label: "Sand", accent: "#b8860b", bg: "#fdf6e3", darkBg: "#1a1610" },
-    { id: "pink", label: "Pink", accent: "#d946ef", bg: "#fdf4ff", darkBg: "#1f0a24" },
-    { id: "cyan", label: "Cyan", accent: "#0891b2", bg: "#ecfeff", darkBg: "#042f3b" },
-    { id: "coffee", label: "Coffee", accent: "#7c4a28", bg: "#faf3eb", darkBg: "#1c130b" },
-  ];
-
   // --- Nav active fallback ---
   if (!document.querySelector(".nav-link.active")) {
     var currentPath = location.pathname;
@@ -38,14 +27,12 @@
       var href = link.getAttribute("href");
       if (!href) return;
 
-      // Exact match
       if (href === currentPath) {
         found = true;
         link.classList.add("active");
         return;
       }
 
-      // Home: /index.html is equivalent to /
       if (
         href === "/" &&
         (currentPath === "/index.html" || currentPath === "/")
@@ -55,14 +42,12 @@
         return;
       }
 
-      // Posts listing: /pages/<n>.html matches any page number
       if (/\/pages\/\d+\.html$/.test(href) && /\/pages\/\d+\.html$/.test(currentPath)) {
         found = true;
         link.classList.add("active");
       }
     });
 
-    // Still nothing — highlight home as ultimate fallback
     if (!found) {
       var homeLink =
         document.querySelector('.nav-link[href$="/"]') || document.querySelector(".nav-link");
@@ -102,118 +87,6 @@
       var next = htmlEl.classList.contains("dark") ? "light" : "dark";
       applyTheme(next);
     });
-  });
-
-  // --- Color Scheme: shared state ---
-  var schemeLink = document.querySelector('link[href*="scheme-"]');
-
-  function getSchemeId() {
-    var stored = localStorage.getItem("scheme");
-    if (stored) return stored;
-    if (schemeLink) {
-      var m = schemeLink.getAttribute("href").match(/scheme-(\w+)\.css/);
-      if (m) return m[1];
-    }
-    return SCHEMES[0].id;
-  }
-
-  function applyScheme(id) {
-    if (!schemeLink) return;
-    var oldHref = schemeLink.getAttribute("href");
-    var prefix = oldHref.substring(0, oldHref.lastIndexOf("scheme-"));
-    schemeLink.setAttribute("href", prefix + "scheme-" + id + ".css");
-    localStorage.setItem("scheme", id);
-    // Update data attribute on all scheme buttons
-    document.querySelectorAll(".scheme-btn").forEach(function (btn) {
-      btn.setAttribute("data-scheme", id);
-    });
-    // Update active state in all pickers
-    document.querySelectorAll(".scheme-swatch").forEach(function (sw) {
-      sw.classList.toggle("active", sw.getAttribute("data-scheme") === id);
-    });
-  }
-
-  // Apply persisted scheme on load
-  applyScheme(getSchemeId());
-
-  // --- Build scheme swatches & populate popup + picker ---
-  function buildSwatch(scheme, activeId) {
-    var div = document.createElement("div");
-    div.className = "scheme-swatch" + (scheme.id === activeId ? " active" : "");
-    div.setAttribute("data-scheme", scheme.id);
-    div.setAttribute("role", "button");
-    div.setAttribute("tabindex", "0");
-    div.setAttribute("title", scheme.label);
-
-    // Color preview bar: light bg | accent | dark bg
-    var bar = document.createElement("div");
-    bar.className = "scheme-swatch-bar";
-    bar.innerHTML =
-      '<span style="background:' +
-      scheme.bg +
-      '"></span>' +
-      '<span style="background:' +
-      scheme.accent +
-      '"></span>' +
-      '<span style="background:' +
-      scheme.darkBg +
-      '"></span>';
-    div.appendChild(bar);
-
-    var label = document.createElement("span");
-    label.className = "scheme-swatch-label";
-    label.textContent = scheme.label;
-    div.appendChild(label);
-
-    div.addEventListener("click", function () {
-      applyScheme(scheme.id);
-      closeAllPopups();
-    });
-
-    return div;
-  }
-
-  var activeId = getSchemeId();
-  var popupGrid = document.getElementById("scheme-popup-grid");
-
-  if (popupGrid) {
-    SCHEMES.forEach(function (s) {
-      popupGrid.appendChild(buildSwatch(s, activeId));
-    });
-  }
-
-  // --- Popup toggle ---
-  var schemeToggle = document.getElementById("scheme-toggle");
-  var schemePopup = document.getElementById("scheme-popup");
-
-  if (schemeToggle && schemePopup) {
-    schemeToggle.addEventListener("click", function (e) {
-      e.stopPropagation();
-      schemePopup.classList.toggle("active");
-    });
-  }
-
-  // --- Close popup on outside click ---
-  function closeAllPopups() {
-    if (schemePopup) schemePopup.classList.remove("active");
-  }
-
-  document.addEventListener("click", function (e) {
-    if (schemePopup && schemePopup.classList.contains("active")) {
-      // Don't close if clicking inside the popup or the toggle button
-      if (
-        !schemePopup.contains(e.target) &&
-        e.target !== schemeToggle &&
-        !schemeToggle.contains(e.target)
-      ) {
-        schemePopup.classList.remove("active");
-      }
-    }
-  });
-
-  // Close on Escape
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeAllPopups();
   });
 
   // --- Mobile Drawer ---
@@ -291,16 +164,13 @@
       document.body.style.overflow = "";
     }
 
-    // Close on overlay background click (not on image)
     overlay.addEventListener("click", close);
     closeBtn.addEventListener("click", close);
 
-    // Close on Escape
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && overlay.classList.contains("open")) close();
     });
 
-    // Delegate click on images inside post-content
     document.addEventListener("click", function (e) {
       var img = e.target.closest("#post-content img");
       if (img && !img.closest("a")) {
@@ -310,15 +180,14 @@
     });
   })();
 
-  // --- TOC: Tree-structured table of contents for post pages ---
-  var postWithToc = document.getElementById("post-with-toc");
+  // --- TOC: in-sidebar table of contents for post pages ---
   var postContent = document.getElementById("post-content");
   var tocListWrap = document.getElementById("toc-list-wrap");
+  var tocSidebar = document.getElementById("toc-sidebar");
 
-  if (postContent && tocListWrap && postWithToc) {
+  if (postContent && tocListWrap && tocSidebar) {
     // 1. Collect all headings h1-h6 and assign stable IDs
     var headings = postContent.querySelectorAll("h1, h2, h3, h4, h5, h6");
-    var tocSidebar = document.getElementById("toc-sidebar");
 
     if (headings.length > 0) {
       headings.forEach(function (heading, index) {
@@ -346,14 +215,14 @@
       }
 
       // 3. Render tree as nested <ul>
-      function renderTree(tree, indent) {
+      function renderTree(tree) {
         if (tree.length === 0) return "";
         var html = '<ul class="toc-level">';
         for (var i = 0; i < tree.length; i++) {
           var n = tree[i];
           html += '<li class="toc-item toc-l' + n.level + '" data-toc-id="' + n.id + '">';
           html += '<a href="#' + n.id + '" class="toc-link">' + n.text + "</a>";
-          html += renderTree(n.children, indent + 1);
+          html += renderTree(n.children);
           html += "</li>";
         }
         html += "</ul>";
@@ -361,18 +230,16 @@
       }
 
       var tree = buildTree(Array.prototype.slice.call(headings));
-      tocListWrap.innerHTML = renderTree(tree, 0);
+      tocListWrap.innerHTML = renderTree(tree);
 
       // 4. Scroll tracking via IntersectionObserver
       var tocLinks = tocListWrap.querySelectorAll(".toc-link");
-      var activeLink = null;
 
       function setActive(id) {
         tocLinks.forEach(function (link) {
           var li = link.parentNode;
           var isActive = li.getAttribute("data-toc-id") === id;
           li.classList.toggle("toc-active", isActive);
-          if (isActive) activeLink = link;
         });
       }
 
@@ -422,8 +289,10 @@
           }
         }
       });
-    } else if (tocSidebar) {
+    } else {
       tocSidebar.style.display = "none";
     }
+  } else if (tocSidebar) {
+    tocSidebar.style.display = "none";
   }
 })();

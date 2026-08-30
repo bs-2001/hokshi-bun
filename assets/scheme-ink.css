@@ -1,0 +1,30 @@
+/* --- Color Space: sRGB ---
+ * All color values below are standard sRGB hex values.
+ * No HDR or wide-gamut (P3/Rec2020) colors are used.
+ * See style.css for the full sRGB gamut lock policy. */
+
+/* --- CSS Variables (Light) — "Ink on Paper" --- */
+:root {
+  --accent: #2f5d50;
+  --accent-hover: #24493f;
+  --bg-tint: #f2f0ea;
+  --bg: #fbfaf8;
+  --text: #2a2a2a;
+  --text-muted: #6b6b6b;
+  --line: #e5e3de;
+  --selection: rgba(47, 93, 80, 0.12);
+  --card: #ffffff;
+}
+
+/* --- CSS Variables (Dark) — "Ink on Night" --- */
+html.dark {
+  --accent: #6fa593;
+  --accent-hover: #8cbcab;
+  --bg-tint: #1a1917;
+  --bg: #161614;
+  --text: #e6e4e0;
+  --text-muted: #9b9b95;
+  --line: #2b2b28;
+  --selection: rgba(111, 165, 147, 0.16);
+  --card: #1d1d1b;
+}
