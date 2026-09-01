@@ -43,6 +43,7 @@ h1, h2, h3, .hero-title, .post-full-title, .section-title, .sidebar-profile-name
   font-family: var(--font-serif);
   font-weight: 700;
   letter-spacing: -0.01em;
+  color: var(--text-strong);
 }
 
 /* --- Focus --- */
@@ -107,7 +108,7 @@ h1, h2, h3, .hero-title, .post-full-title, .section-title, .sidebar-profile-name
   font-weight: 800;
   letter-spacing: 0.04em;
   text-decoration: none;
-  color: var(--text);
+  color: var(--text-strong);
   transition: color 0.2s;
   white-space: nowrap;
   font-family: var(--font-serif);
@@ -300,7 +301,7 @@ html.dark .hljs-deletion {
 .sidebar-profile {
   text-align: center;
   padding-bottom: 1.75rem;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .sidebar-avatar {
@@ -321,7 +322,7 @@ html.dark .hljs-deletion {
 
 .sidebar-profile-desc {
   font-size: 0.875rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 0.75rem;
 }
@@ -406,11 +407,12 @@ html.dark .hljs-deletion {
   padding: 0.2rem 0.5rem;
   border: 1px solid var(--line);
   border-radius: 999px;
-  transition: color 0.2s, border-color 0.2s;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 .sidebar-tag-link:hover {
   color: var(--accent);
   border-color: var(--accent);
+  background: var(--accent-soft);
 }
 
 .sidebar-recent {
@@ -486,7 +488,7 @@ html.dark .hljs-deletion {
   margin-bottom: 1.5rem;
   gap: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .section-title {
@@ -517,14 +519,19 @@ html.dark .hljs-deletion {
 
 .hero-title {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.2;
   margin-bottom: 0.75rem;
+  background: linear-gradient(120deg, var(--accent-hover), var(--accent) 55%, var(--accent-hover));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--accent);
 }
 
 .hero-desc {
   font-size: 1.125rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   max-width: 36rem;
   line-height: 1.6;
 }
@@ -533,7 +540,7 @@ html.dark .hljs-deletion {
   margin-top: 1rem;
   font-size: 0.9375rem;
   line-height: 1.75;
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 /* --- Post List --- */
@@ -565,12 +572,16 @@ html.dark .hljs-deletion {
 }
 
 .post-link {
-  color: var(--text);
+  color: var(--text-strong);
   text-decoration: none;
   transition: color 0.2s;
 }
-.post-link:hover {
+.post-link:hover,
+.post-item:hover .post-link {
   color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
 }
 
 .post-meta {
@@ -585,11 +596,11 @@ html.dark .hljs-deletion {
 }
 
 .meta-sep {
-  color: var(--line);
+  color: var(--text-faint);
 }
 
 .post-cat {
-  color: var(--text-muted);
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -601,7 +612,7 @@ html.dark .hljs-deletion {
 
 .post-desc {
   font-size: 0.9375rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 0.5rem;
 }
@@ -673,11 +684,13 @@ html.dark .hljs-deletion {
 .filter-btn:hover {
   border-color: var(--accent);
   color: var(--accent);
+  background: var(--accent-soft);
 }
 .filter-btn.filter-active {
   border-color: var(--accent);
   background: var(--accent);
   color: #fff;
+  font-weight: 600;
 }
 
 /* --- Pagination --- */
@@ -863,16 +876,19 @@ html.dark .hljs-deletion {
 
 .post-content blockquote {
   border-left: 3px solid var(--accent);
-  padding-left: 1rem;
+  background: var(--accent-soft);
+  padding: 0.75rem 1rem;
   margin: 1.5rem 0;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-style: italic;
+  border-radius: 0 6px 6px 0;
 }
 
 .post-content code {
   font-family: var(--font-mono);
   font-size: 0.875em;
-  background: var(--line);
+  background: var(--accent-soft);
+  color: var(--text-strong);
   padding: 0.125rem 0.375rem;
   border-radius: 4px;
 }
@@ -883,7 +899,8 @@ html.dark .hljs-deletion {
 }
 
 .post-content pre {
-  background: var(--line);
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
   padding: 1rem;
   border-radius: 8px;
   overflow-x: auto;
@@ -932,21 +949,23 @@ html.dark .hljs-deletion {
   padding: 0.375rem 0.75rem;
   border: 1px solid var(--line);
   border-radius: 999px;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   text-decoration: none;
   transition: all 0.2s;
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
+  background: var(--surface);
 }
 .tag-cloud-item:hover {
   border-color: var(--accent);
   color: var(--accent);
+  background: var(--accent-soft);
 }
 
 .tag-count {
   font-size: 0.75rem;
-  background: var(--line);
+  background: var(--surface-soft);
   padding: 0.0625rem 0.375rem;
   border-radius: 999px;
   color: var(--text-muted);
@@ -1007,7 +1026,7 @@ html.dark .hljs-deletion {
 
 .archive-link {
   font-size: 0.9375rem;
-  color: var(--text);
+  color: var(--text-strong);
   text-decoration: none;
   transition: color 0.2s;
 }
